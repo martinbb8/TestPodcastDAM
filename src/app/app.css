@@ -1,0 +1,98 @@
+/* src/app/app.css */
+
+/* Estilos generales del contenedor principal */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ocupa toda la altura de la vista */
+  background-color: #f0f2f5; /* Fondo suave */
+  font-family: 'Inter', sans-serif; /* Fuente consistente */
+  color: #333;
+}
+
+/* Estilos del Header */
+.app-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #000; /* Fondo negro */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  height: 25vh; /* Altura: 1/4 de la pantalla (25% del viewport height) */
+  box-sizing: border-box; /* Para incluir padding en la altura */
+}
+
+.logo-dam {
+  max-width: 100%; /* La imagen se ajustará al ancho del header */
+  height: 100%; /* La imagen se ajustará a la altura definida en el header */
+  object-fit: contain; /* Asegura que la imagen se escala para caber, manteniendo su relación de aspecto */
+  border-radius: 12px; /* Bordes redondeados para la imagen/logo */
+}
+
+/* Estilos del contenido principal (Main) */
+.app-main-content {
+  flex-grow: 1; /* Permite que el main ocupe el espacio disponible entre header y footer */
+  display: flex; /* Flexbox para centrar el contenido ruteado */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  /* El height de main ahora será flexible, ocupando el espacio restante */
+  /* No necesitamos un height fijo aquí ya que flex-grow lo gestiona */
+  box-sizing: border-box; /* Para incluir padding en la altura */
+  overflow-y: auto; /* Permite scroll si el contenido ruteado es muy largo */
+}
+
+/* Estilos del Footer */
+.app-footer {
+  padding: 20px;
+  background-color: #333; /* Fondo oscuro para el footer */
+  color: #f0f0f0;
+  text-align: center;
+  font-size: 0.9em;
+  line-height: 1.6;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  height: 25vh; /* Altura: 1/4 de la pantalla */
+  box-sizing: border-box; /* Para incluir padding en la altura */
+  display: flex; /* Para centrar contenido verticalmente */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-footer a {
+  color: #87CEEB; /* Un azul claro para los enlaces */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.app-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries para Responsividad en móvil */
+@media (max-width: 768px) {
+  .app-header {
+    height: 20vh;
+  }
+  .app-footer {
+    height: 20vh;
+  }
+  /* .app-main-content se ajustará automáticamente */
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    height: 18vh;
+  }
+  .app-footer {
+    height: 18vh;
+  }
+}
+
+/* Los estilos para los botones 'TEST' y 'PODCAST' se moverán al HomeComponent */
+/*
+.button-container { ... }
+button.mat-raised-button { ... }
+.button-icon { ... }
+*/

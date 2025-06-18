@@ -1,0 +1,55 @@
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Ocupa toda la altura disponible del main-content */
+  width: 100%;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column; /* Apilados verticalmente */
+  gap: 25px; /* Espacio entre los botones */
+  justify-content: center;
+  width: 100%;
+  max-width: 400px; /* Ancho máximo para los botones */
+}
+
+/* Estilos para los botones de Material */
+button.mat-raised-button {
+  padding: 25px 50px;
+  font-size: 1.8em;
+  font-weight: bold;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  flex-grow: 1;
+  text-align: center;
+}
+
+button.mat-raised-button:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Iconos dentro de los botones */
+.button-icon {
+  margin-right: 15px;
+  font-size: 1.2em;
+}
+
+/* Media Queries para Responsividad en móvil */
+@media (max-width: 768px) {
+  button.mat-raised-button {
+    padding: 20px 40px;
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  button.mat-raised-button {
+    padding: 18px 30px;
+    font-size: 1.4em;
+  }
+}

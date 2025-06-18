@@ -1,0 +1,21 @@
+
+<div class="main-container">
+  <!-- Header: Contiene la imagen DAM -->
+  <header class="app-header">
+    <img src="/assets/DAM.png" alt="Dream And Make Logo" class="logo-dam">
+  </header>
+
+  <!-- El router-outlet ahora está dentro de la etiqueta <main> -->
+  <!-- Esto significa que todo el contenido ruteado (HomeComponent, SubjectsComponent, TestComponent, etc.) -->
+  <!-- se cargará DENTRO de esta sección principal. -->
+  <main class="app-main-content">
+    <router-outlet></router-outlet>
+  </main>
+
+  <!-- Footer: Contiene la información de contacto y el enlace a GitHub -->
+  <footer class="app-footer">
+    <p>Repositorio GitHub: <a href="https://github.com/TestPodcastDAM" target="_blank" rel="noopener noreferrer">TestPodcastDAM</a></p>
+    <p>Email: <a href="mailto:ciclismoacuatico@gmail.com">ciclismoacuatico&commat;gmail.com</a></p>
+    <p>Teléfono: <a href="tel:+34622045103">+34 622 04 51 03</a></p>
+  </footer>
+</div>

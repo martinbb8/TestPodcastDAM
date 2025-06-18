@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "questionText": "¿Cuál de las siguientes NO es una característica principal de la Digitalización?",
+    "options": [
+      "Automatización de procesos",
+      "Integración de sistemas",
+      "Eliminación total del factor humano",
+      "Uso intensivo de datos"
+    ],
+    "correctAnswer": "Eliminación total del factor humano",
+    "explanation": "La digitalización busca optimizar y automatizar, pero el factor humano es crucial para supervisión, análisis y decisiones estratégicas."
+  },
+  {
+    "id": 2,
+    "questionText": "¿Qué tecnología permite conectar dispositivos y sistemas para recoger e intercambiar datos, formando 'cosas' inteligentes?",
+    "options": [
+      "Inteligencia Artificial (IA)",
+      "Blockchain",
+      "Internet de las Cosas (IoT)",
+      "Computación en la Nube (Cloud Computing)"
+    ],
+    "correctAnswer": "Internet de las Cosas (IoT)",
+    "explanation": "IoT es la red de objetos físicos con sensores y software para conectarse e intercambiar datos a través de internet."
+  },
+  {
+    "id": 3,
+    "questionText": "¿Cuál es el principal objetivo de los entornos OT en una empresa?",
+    "options": [
+      "Controlar y automatizar procesos físicos en tiempo real para la producción",
+      "Optimizar el flujo de información digital",
+      "Minimizar el tiempo de respuesta en el manejo de datos",
+      "Gestionar redes de comunicación"
+    ],
+    "correctAnswer": "Controlar y automatizar procesos físicos en tiempo real para la producción",
+    "explanation": "Los entornos OT (Operational Technology) controlan, monitorean y automatizan procesos físicos, dispositivos y eventos industriales en tiempo real para la producción."
+  },
+  {
+    "id": 4,
+    "questionText": "¿Cómo ayuda la computación en la nube en la toma de decisiones dentro de las empresas?",
+    "options": [
+      "Generando datos a largo plazo sin capacidad de análisis en tiempo real.",
+      "Ofreciendo herramientas para análisis de datos en tiempo real que mejoran la toma de decisiones.",
+      "Limitando el acceso a datos en tiempo real, dificultando las decisiones inmediatas.",
+      "Eludiendo la optimización de la cadena de suministro y otros procesos de negocio."
+    ],
+    "correctAnswer": "Ofreciendo herramientas para análisis de datos en tiempo real que mejoran la toma de decisiones.",
+    "explanation": "La nube proporciona infraestructura escalable y herramientas para almacenar, procesar y analizar grandes volúmenes de datos en tiempo real, mejorando la toma de decisiones."
+  },
+  {
+    "id": 5,
+    "questionText": "¿En qué etapa de las revoluciones industriales se introdujeron las líneas de producción en masa y el uso del teléfono?",
+    "options": [
+      "Primera Revolución Industrial",
+      "Segunda Revolución Industrial",
+      "Tercera Revolución Industrial",
+      "Cuarta Revolución Industrial"
+    ],
+    "correctAnswer": "Segunda Revolución Industrial",
+    "explanation": "La Segunda Revolución Industrial (finales del s. XIX - principios del s. XX) introdujo líneas de producción en masa y el teléfono."
+  },
+  {
+    "id": 6,
+    "questionText": "¿Qué tecnología combina datos en tiempo real de un objeto físico con su réplica virtual para simular y optimizar su rendimiento?",
+    "options": [
+      "Robótica colaborativa (Cobótica).",
+      "Blockchain.",
+      "Gemelos Digitales.",
+      "Realidad Aumentada."
+    ],
+    "correctAnswer": "Gemelos Digitales.",
+    "explanation": "Los Gemelos Digitales son representaciones virtuales que usan datos en tiempo real de objetos físicos para simular y optimizar su rendimiento."
+  },
+  {
+    "id": 7,
+    "questionText": "¿Qué se busca lograr durante la fase de pruebas piloto en la implantación de tecnologías?",
+    "options": [
+      "Realizar una implementación a gran escala de inmediato.",
+      "Evaluar el rendimiento de las tecnologías en un entorno controlado antes de su expansión.",
+      "Reducir costos mediante la eliminación de algunas tecnologías.",
+      "Obtener la aprobación de todos los departamentos antes de la implementación."
+    ],
+    "correctAnswer": "Evaluar el rendimiento de las tecnologías en un entorno controlado antes de su expansión.",
+    "explanation": "Las pruebas piloto evalúan el rendimiento de nuevas tecnologías en un entorno controlado y a pequeña escala antes de la implementación a gran escala."
+  },
+  {
+    "id": 8,
+    "questionText": "Según las fases del análisis de datos, ¿cuál de las siguientes técnicas recomendaría una acción específica basada en los resultados analizados?",
+    "options": [
+      "Análisis prescriptivo.",
+      "Análisis descriptivo.",
+      "Análisis predictivo.",
+      "Análisis exploratorio."
+    ],
+    "correctAnswer": "Análisis prescriptivo.",
+    "explanation": "El Análisis prescriptivo recomienda acciones concretas y optimiza resultados."
+  },
+  {
+    "id": 9,
+    "questionText": "¿Qué sector utiliza la IA para implementar herramientas como los «robo-advisors»?",
+    "options": [
+      "Educación",
+      "Finanzas",
+      "Transporte y movilidad",
+      "Seguridad"
+    ],
+    "correctAnswer": "Finanzas",
+    "explanation": "Los 'robo-advisors' son plataformas automatizadas basadas en IA que ofrecen asesoramiento financiero, una aplicación directa en Finanzas."
+  },
+  {
+    "id": 10,
+    "questionText": "¿Cómo contribuye el Big Data y el análisis avanzado en el entorno de negocio?",
+    "options": [
+      "Permitiendo a las empresas analizar solo los datos obtenidos de ventas pasadas.",
+      "Limitar el acceso a la información para evitar sobrecargar a los empleados.",
+      "Reduciendo la necesidad de interacción entre departamentos en la toma de decisiones.",
+      "Facilitando la personalización de la experiencia de compra y optimización del inventario mediante el análisis de datos en tiempo real."
+    ],
+    "correctAnswer": "Facilitando la personalización de la experiencia de compra y optimización del inventario mediante el análisis de datos en tiempo real.",
+    "explanation": "Big Data y análisis avanzado permiten personalizar la experiencia de compra y optimizar el inventario analizando grandes volúmenes de datos en tiempo real."
+  },
+  {
+    "id": 11,
+    "questionText": "¿Qué lenguaje de programación es ideal para aplicaciones de IA que requieren un alto rendimiento y control de recursos, como juegos o sistemas embebidos?",
+    "options": [
+      "C++",
+      "R",
+      "Python",
+      "Julia"
+    ],
+    "correctAnswer": "C++",
+    "explanation": "C++ ofrece alto rendimiento y control preciso de recursos, ideal para IA en juegos o sistemas embebidos."
+  },
+  {
+    "id": 12,
+    "questionText": "¿Qué función cumple el software de gestión de proyectos en la planificación de tareas compartidas en una empresa digitalizada?",
+    "options": [
+      "Permite únicamente la distribución de tareas entre directivos",
+      "Limita el acceso a la información solo a empleados de alto nivel",
+      "Facilita únicamente la gestión financiera de la empresa",
+      "Mejora la productividad y permite que las unidades trabajen de manera sincrónica y organizada"
+    ],
+    "correctAnswer": "Mejora la productividad y permite que las unidades trabajen de manera sincrónica y organizada",
+    "explanation": "El software de gestión de proyectos mejora la productividad facilitando la asignación de tareas, seguimiento y comunicación para un trabajo organizado."
+  },
+  {
+    "id": 13,
+    "questionText": "¿Cuál de las siguientes tareas se realiza en la etapa de «Limpieza y transformación de datos» dentro de la ingeniería de datos?",
+    "options": [
+      "Integración de datos de diferentes fuentes",
+      "Normalización de datos para mantener consistencia",
+      "Almacenamiento en la nube para escalabilidad",
+      "Procesamiento de grandes volúmenes de datos en tiempo real"
+    ],
+    "correctAnswer": "Normalización de datos para mantener consistencia",
+    "explanation": "La limpieza y transformación de datos normaliza los datos, elimina duplicados y corrige errores para asegurar calidad y fiabilidad."
+  },
+  {
+    "id": 14,
+    "questionText": "¿Qué ocurre específicamente durante el procesamiento de datos en sistemas productivos digitalizados?",
+    "options": [
+      "Los datos son evaluados manualmente para identificar patrones clave.",
+      "Se generan datos en tiempo real mediante sensores y dispositivos IoT.",
+      "Los datos se integran en sistemas avanzados como plataformas de big data o inteligencia artificial.",
+      "Se analizan gráficos y reportes para optimizar los procesos productivos."
+    ],
+    "correctAnswer": "Se generan datos en tiempo real mediante sensores y dispositivos IoT.",
+    "explanation": "En sistemas digitalizados, el procesamiento de datos comienza con la captura y generación en tiempo real por sensores y dispositivos IoT."
+  },
+  {
+    "id": 15,
+    "questionText": "¿Cuál es la principal responsabilidad del proveedor en el nivel IaaS del Cloud Computing?",
+    "options": [
+      "Gestionar el software y las aplicaciones del usuario.",
+      "Proporcionar hardware, virtualización y redes.",
+      "Desarrollar y probar aplicaciones para el usuario.",
+      "Gestionar el uso directo de las aplicaciones por parte del usuario."
+    ],
+    "correctAnswer": "Proporcionar hardware, virtualización y redes.",
+    "explanation": "En IaaS, el proveedor es responsable de la infraestructura fundamental: hardware, virtualización y redes, dejando al usuario la gestión del software."
+  },
+  {
+    "id": 16,
+    "questionText": "¿Cuál de las siguientes opciones describe mejor un efecto clave de implementar una estrategia de comunicación multicanal en una empresa digitalizada?",
+    "options": [
+      "Aumenta la complejidad en la interacción con clientes, generando mayores costos operativos",
+      "Potencia la relación con clientes al facilitar acceso y disponibilidad en diferentes plataformas",
+      "Limita la flexibilidad de respuesta debido a la dependencia de herramientas específicas",
+      "Reduce la efectividad de la comunicación al centralizar los canales en plataformas únicas"
+    ],
+    "correctAnswer": "Potencia la relación con clientes al facilitar acceso y disponibilidad en diferentes plataformas",
+    "explanation": "Una comunicación multicanal mejora la relación con clientes ofreciendo diversas vías para interactuar con la marca, mejorando la experiencia del cliente."
+  },
+  {
+    "id": 17,
+    "questionText": "¿En qué contexto es más apropiado el uso del edge computing para el procesamiento en tiempo real?",
+    "options": [
+      "Dispositivos IoT en la industria 4.0 que deben responder a eventos inmediatos.",
+      "Almacenar datos históricos para análisis futuros.",
+      "Operaciones bancarias de largo plazo.",
+      "Gestión de bases de datos distribuidas a escala global."
+    ],
+    "correctAnswer": "Dispositivos IoT en la industria 4.0 que deben responder a eventos inmediatos.",
+    "explanation": "Edge computing procesa datos cerca de la fuente para baja latencia, crucial para dispositivos IoT en Industria 4.0 que requieren respuestas inmediatas."
+  },
+  {
+    "id": 18,
+    "questionText": "En términos de ciberseguridad, ¿qué tecnologías son esenciales para proteger la información sensible en los sistemas digitalizados?",
+    "options": [
+      "Big data y blockchain.",
+      "Encriptado, autenticación multifactorial y protección de redes.",
+      "Computación en la nube y edge computing.",
+      "Inteligencia artificial y machine learning."
+    ],
+    "correctAnswer": "Encriptado, autenticación multifactorial y protección de redes.",
+    "explanation": "El encriptado, la autenticación multifactorial (MFA) y la protección de redes (firewalls) son esenciales para la ciberseguridad y protección de información sensible."
+  },
+  {
+    "id": 19,
+    "questionText": "¿Qué técnica se considera fundamental para los avances de la IA moderna desde 2010?",
+    "options": [
+      "Sistemas expertos basados en reglas explícitas.",
+      "Aprendizaje profundo (Deep Learning) y redes neuronales profundas.",
+      "Lógica matemática para representación de razonamiento humano.",
+      "Programación en lenguajes como Lisp y Prolog."
+    ],
+    "correctAnswer": "Aprendizaje profundo (Deep Learning) y redes neuronales profundas.",
+    "explanation": "Desde 2010, el Deep Learning y las redes neuronales profundas han impulsado los avances más significativos en IA, revolucionando áreas clave."
+  },
+  {
+    "id": 20,
+    "questionText": "¿Cómo facilita la nube la interoperabilidad entre diversas plataformas y aplicaciones?",
+    "options": [
+      "Usando estándares abiertos y APIs para permitir la comunicación entre diferentes sistemas.",
+      "Al prohibir el uso de estándares abiertos y APIs.",
+      "Ofreciendo plataformas exclusivas de un solo proveedor.",
+      "Integrando solo aplicaciones desarrolladas por el mismo proveedor de nube."
+    ],
+    "correctAnswer": "Usando estándares abiertos y APIs para permitir la comunicación entre diferentes sistemas.",
+    "explanation": "La nube facilita la interoperabilidad mediante APIs y estándares abiertos, permitiendo que diferentes servicios y aplicaciones se conecten y compartan datos."
+  },
+  {
+    "id": 21,
+    "questionText": "¿Qué tipo de aplicaciones permiten a las empresas optimizar el flujo de materiales en la cadena de suministro?",
+    "options": [
+      "Aplicaciones de marketing digital",
+      "Aplicaciones de gestión de relaciones con el cliente (CRM)",
+      "Aplicaciones de monitorización remota",
+      "Aplicaciones de gestión operativa"
+    ],
+    "correctAnswer": "Aplicaciones de gestión operativa",
+    "explanation": "Las aplicaciones de gestión operativa (como SCM o ERP) optimizan procesos centrales de la empresa, incluyendo producción, inventario y cadena de suministro."
+  },
+  {
+    "id": 22,
+    "questionText": "En una fábrica inteligente, ¿qué permite ajustar el funcionamiento de las máquinas de producción en tiempo real?",
+    "options": [
+      "Robots de mantenimiento manual",
+      "Sensores conectados que recopilan y analizan datos en una plataforma digital",
+      "Actuadores sin sensores",
+      "Trabajadores operando las máquinas directamente"
+    ],
+    "correctAnswer": "Sensores conectados que recopilan y analizan datos en una plataforma digital",
+    "explanation": "En una fábrica inteligente, los sensores conectados recopilan y analizan datos de máquinas en una plataforma digital, permitiendo ajustes automáticos en tiempo real."
+  },
+  {
+    "id": 23,
+    "questionText": "¿Qué desafío legal en relación con la propiedad intelectual plantea la IA en el contexto de las creaciones generadas por algoritmos?",
+    "options": [
+      "La IA no puede generar contenido original.",
+      "La IA crea contenido sin violar los derechos de autor.",
+      "La pregunta de quién posee los derechos de autor sobre una obra generada por IA.",
+      "Las leyes de propiedad intelectual ya contemplan a la IA como autor."
+    ],
+    "correctAnswer": "La pregunta de quién posee los derechos de autor sobre una obra generada por IA.",
+    "explanation": "La IA genera contenido, pero las leyes de propiedad intelectual, diseñadas para humanos, crean ambigüedad sobre la autoría de obras generadas por IA."
+  },
+  {
+    "id": 24,
+    "questionText": "¿Qué implica el coste de oportunidad en el contexto de la digitalización?",
+    "options": [
+      "Los beneficios que se dejan de obtener por no tomar decisiones a tiempo.",
+      "Los beneficios que se obtienen al no invertir en tecnología.",
+      "La reducción de costos operativos al no digitalizar.",
+      "La mejora de la satisfacción del cliente mediante procesos manuales."
+    ],
+    "correctAnswer": "Los beneficios que se dejan de obtener por no tomar decisiones a tiempo.",
+    "explanation": "El coste de oportunidad en digitalización son los beneficios (eficiencia, competitividad) que se pierden al no adoptar tecnologías digitales a tiempo."
+  },
+  {
+    "id": 25,
+    "questionText": "En la minería de datos, ¿qué tipo de modelo se seleccionaría para identificar patrones en grandes conjuntos de datos sin etiquetas?",
+    "options": [
+      "Clasificación.",
+      "Clustering.",
+      "Reglas de asociación.",
+      "Red neuronal profunda."
+    ],
+    "correctAnswer": "Clustering.",
+    "explanation": "El Clustering (agrupamiento) es la técnica adecuada para encontrar patrones y estructuras en grandes conjuntos de datos sin etiquetas."
+  },
+  {
+    "id": 26,
+    "questionText": "¿Cuál de las siguientes opciones es una ventaja principal del nivel SaaS?",
+    "options": [
+      "Escalabilidad de recursos según las necesidades del negocio.",
+      "Acceso a aplicaciones sin necesidad de instalarlas localmente.",
+      "Herramientas avanzadas para desarrollar y probar software.",
+      "Control total sobre el hardware y la infraestructura."
+    ],
+    "correctAnswer": "Acceso a aplicaciones sin necesidad de instalarlas localmente.",
+    "explanation": "La principal ventaja de SaaS es el acceso a aplicaciones vía internet sin necesidad de instalación o gestión local por parte del usuario."
+  },
+  {
+    "id": 27,
+    "questionText": "¿Cuál es la función principal de los dashboards interactivos en el seguimiento de proyectos de digitalización?",
+    "options": [
+      "Almacenar datos de manera eficiente.",
+      "Monitorear el progreso en tiempo real mediante indicadores clave de rendimiento (KPIs).",
+      "Generar informes detallados sobre el estado del proyecto.",
+      "Realizar análisis de sentimiento sobre la satisfacción del cliente."
+    ],
+    "correctAnswer": "Monitorear el progreso en tiempo real mediante indicadores clave de rendimiento (KPIs).",
+    "explanation": "Los dashboards interactivos monitorean el progreso de proyectos en tiempo real usando KPIs, facilitando la toma de decisiones ágiles."
+  },
+  {
+    "id": 28,
+    "questionText": "¿Cuál es una de las principales diferencias entre un dato y la información?",
+    "options": [
+      "Los datos son siempre más accesibles que la información.",
+      "Los datos tienen un significado claro por sí mismos.",
+      "La información incluye contexto y facilita la toma de decisiones.",
+      "La información se genera directamente de los dispositivos IoT."
+    ],
+    "correctAnswer": "La información incluye contexto y facilita la toma de decisiones.",
+    "explanation": "Un dato es bruto y sin contexto; la información es dato procesado y organizado que, con contexto, facilita la toma de decisiones."
+  },
+  {
+    "id": 29,
+    "questionText": "¿Qué diferencia principal existe entre la huella digital activa y pasiva?",
+    "options": [
+      "La activa incluye datos recopilados por cookies, y la pasiva, comentarios en redes sociales.",
+      "La activa se genera de forma intencional, y la pasiva, sin que el usuario lo note.",
+      "La pasiva se asocia solo a redes sociales, y la activa, a direcciones IP.",
+      "Ambas huellas requieren siempre del consentimiento explícito del usuario."
+    ],
+    "correctAnswer": "La activa se genera de forma intencional, y la pasiva, sin que el usuario lo note.",
+    "explanation": "La huella digital activa (publicar, enviar email) es intencional; la pasiva (cookies, IP) se genera automáticamente sin que el usuario lo note."
+  },
+  {
+    "id": 30,
+    "questionText": "¿Cuál de las siguientes afirmaciones describe mejor Microsoft 365?",
+    "options": [
+      "Es un software de gestión de proyectos instalado localmente.",
+      "Es una suite de productividad en la nube que incluye aplicaciones como Word y Excel, facilitando la colaboración en tiempo real.",
+      "Se utiliza exclusivamente para el almacenamiento de datos sin herramientas de colaboración.",
+      "Solo es accesible desde dispositivos móviles."
+    ],
+    "correctAnswer": "Es una suite de productividad en la nube que incluye aplicaciones como Word y Excel, facilitando la colaboración en tiempo real.",
+    "explanation": "Microsoft 365 es una suite de productividad en la nube con apps populares como Word y Excel, diseñada para la colaboración en tiempo real desde cualquier dispositivo."
+  }
+]

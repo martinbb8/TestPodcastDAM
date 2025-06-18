@@ -1,0 +1,20 @@
+<!-- src/app/subjects/subjects.html -->
+<div class="subjects-container">
+  <h2>Asignaturas para {{ mode === 'test' ? 'Tests' : (mode === 'podcast' ? 'Podcasts' : 'seleccionar') }}</h2>
+
+  <div class="subject-buttons-grid">
+    <button mat-raised-button color="primary" *ngFor="let subject of subjects" (click)="goToSubject(subject)">
+      {{ subject }}
+    </button>
+  </div>
+
+  <p *ngIf="mode === 'unknown'" class="info-message">
+    Selecciona un modo (Tests o Podcasts) desde la página de inicio.
+  </p>
+
+  <div class="navigation-actions">
+    <button mat-stroked-button color="basic" routerLink="/home">
+      <span class="button-icon">🏠</span> Volver a Inicio
+    </button>
+  </div>
+</div>
