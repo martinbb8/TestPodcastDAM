@@ -1,98 +1,149 @@
 /* src/app/app.css */
-
-/* Estilos generales del contenedor principal */
-.main-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Ocupa toda la altura de la vista */
-  background-color: #f0f2f5; /* Fondo suave */
-  font-family: 'Inter', sans-serif; /* Fuente consistente */
-  color: #333;
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif; /* Fuente general para toda la aplicación */
+  background-color: #f0f2f5; /* Color de fondo suave para el cuerpo de la página */
 }
 
-/* Estilos del Header */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* -------------------- HEADER STYLES -------------------- */
 .app-header {
+  background-color: #000000; /* Fondo negro */
+  color: #ffffff; /* Color de texto por defecto para el header */
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #000; /* Fondo negro */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  height: 25vh; /* Altura: 1/4 de la pantalla (25% del viewport height) */
-  box-sizing: border-box; /* Para incluir padding en la altura */
 }
 
-.logo-dam {
-  max-width: 100%; /* La imagen se ajustará al ancho del header */
-  height: 100%; /* La imagen se ajustará a la altura definida en el header */
-  object-fit: contain; /* Asegura que la imagen se escala para caber, manteniendo su relación de aspecto */
-  border-radius: 12px; /* Bordes redondeados para la imagen/logo */
+.header-text-container {
+  font-family: 'Georgia', serif; /* Una fuente que permita una cursiva pronunciada */
+  font-style: italic; /* Cursiva */
+  font-weight: bold; /* Para que sea una cursiva pronunciada */
+  white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+  font-size: 1.2em; /* Tamaño base para el contenedor, influirá en los 'em' internos */
+  letter-spacing: 0.15em; /* Ajustado para dar espacio entre TODAS las letras */
+  width: 100%; /* Permite que el flexbox distribuya los elementos */
+  display: flex; /* Habilitamos flexbox */
+  justify-content: space-between; /* Distribuye espacio entre los elementos */
+  align-items: baseline; /* Alinea los elementos por su línea base de texto */
+  max-width: 900px; /* Limita el ancho máximo para que no se estire demasiado */
+  margin: 0 auto; /* Centra el contenedor flex */
+  padding: 0 20px; /* Añade un poco de padding lateral */
 }
 
-/* Estilos del contenido principal (Main) */
+.header-word {
+  /* margin: 0 15px; // Este margen ya no es tan necesario con justify-content: space-between */
+  flex: 1; /* Permite que las palabras ocupen el espacio disponible */
+}
+
+/* Alineación específica para cada palabra */
+.header-word1 {
+  text-align: right; /* "Dream" a la derecha de su espacio */
+}
+
+.header-word2 {
+  text-align: center; /* "And" al centro de su espacio */
+}
+
+.header-word3 {
+  text-align: left; /* "Make" a la izquierda de su espacio */
+}
+
+.highlight-char {
+  font-size: 5em; /* Tamaño de fuente para D, A, M */
+  color: #8d3535; /* Color rojo/marrón para D, A, M */
+}
+
+.normal-char {
+  font-size: 1em; /* Se mantiene en 1em relativo al contenedor (.header-text-container) */
+  color: #1d5c1d; /* Color verde oscuro para el resto de letras */
+}
+
+/* -------------------- MAIN CONTENT STYLES -------------------- */
 .app-main-content {
-  flex-grow: 1; /* Permite que el main ocupe el espacio disponible entre header y footer */
-  display: flex; /* Flexbox para centrar el contenido ruteado */
+  flex: 1; /* Ocupa todo el espacio disponible entre header y footer */
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  /* El height de main ahora será flexible, ocupando el espacio restante */
-  /* No necesitamos un height fijo aquí ya que flex-grow lo gestiona */
-  box-sizing: border-box; /* Para incluir padding en la altura */
-  overflow-y: auto; /* Permite scroll si el contenido ruteado es muy largo */
+  padding: 0; /* Asegura que no haya padding global aquí */
 }
 
-/* Estilos del Footer */
+/* -------------------- FOOTER STYLES -------------------- */
 .app-footer {
-  padding: 20px;
-  background-color: #333; /* Fondo oscuro para el footer */
-  color: #f0f0f0;
+  background-color: #333333; /* Fondo oscuro para el footer */
+  color: #ffffff;
+  padding: 15px 20px;
   text-align: center;
-  font-size: 0.9em;
-  line-height: 1.6;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-  height: 25vh; /* Altura: 1/4 de la pantalla */
-  box-sizing: border-box; /* Para incluir padding en la altura */
-  display: flex; /* Para centrar contenido verticalmente */
+  margin-top: auto; /* Empuja el footer hacia abajo */
+}
+
+.footer-content {
+  display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 10px;
   align-items: center;
+}
+
+.app-footer p {
+  margin: 0;
+  font-size: 0.9em;
 }
 
 .app-footer a {
-  color: #87CEEB; /* Un azul claro para los enlaces */
+  color: #aaddff; /* Color de enlace claro para visibilidad */
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
+  display: flex; /* Para alinear icono y texto */
+  align-items: center;
+  gap: 5px; /* Espacio entre icono y texto */
 }
 
 .app-footer a:hover {
+  color: #ffffff; /* Blanco al pasar el ratón */
   text-decoration: underline;
 }
 
-/* Media Queries para Responsividad en móvil */
+.app-footer .icon {
+  vertical-align: middle;
+}
+
+/* Media Queries para Responsive */
 @media (max-width: 768px) {
   .app-header {
-    height: 20vh;
+    padding: 15px 0;
   }
-  .app-footer {
-    height: 20vh;
-  }
-  /* .app-main-content se ajustará automáticamente */
-}
 
-@media (max-width: 480px) {
-  .app-header {
-    height: 18vh;
+  .header-text-container {
+    font-size: 0.8em; /* Ajusta el tamaño base del texto en pantallas más pequeñas */
+    flex-direction: column; /* Apila las palabras en móviles */
+    gap: 5px; /* Espacio entre palabras apiladas */
+    letter-spacing: 0.1em; /* Reduce el espaciado de letras en móviles */
+    padding: 0 10px;
   }
+
+  .header-word1, .header-word2, .header-word3 {
+    text-align: center; /* Centra todas las palabras cuando están apiladas */
+    flex: none; /* Elimina el flex grow cuando están apiladas */
+  }
+
+  .highlight-char {
+    font-size: 2.5em; /* Ajusta el tamaño de las letras destacadas en móviles */
+  }
+
+  .normal-char {
+    font-size: 0.9em; /* Ajusta el tamaño de las letras normales en móviles */
+  }
+
   .app-footer {
-    height: 18vh;
+    padding: 10px 15px;
   }
 }
-
-/* Los estilos para los botones 'TEST' y 'PODCAST' se moverán al HomeComponent */
-/*
-.button-container { ... }
-button.mat-raised-button { ... }
-.button-icon { ... }
-*/

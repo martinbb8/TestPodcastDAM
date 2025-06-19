@@ -1,0 +1,85 @@
+[
+  {
+    "id": 1,
+    "title": "Digitalización en los sectores productivos",
+    "description": "Exploración de la aplicación de la digitalización en la industria, la agricultura, la energía y otros sectores clave para optimizar procesos y aumentar la competitividad.",
+    "audioUrl": "assets/audios/digitalizacion-01.mp3",
+    "transcript": "Aquí irá la transcripción completa del podcast 'Digitalización en los sectores productivos' generada por NotebookLM.",
+    "summary": "Resumen del podcast 'Digitalización en los sectores productivos'.",
+    "keyPoints": [
+      "Impacto de la digitalización en la eficiencia industrial.",
+      "Casos de uso en la agricultura inteligente y la gestión energética.",
+      "Desafíos y oportunidades en la transformación digital sectorial."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Tecnologías habilitadoras",
+    "description": "Análisis de las tecnologías clave que impulsan la digitalización, como la Inteligencia Artificial, el Internet de las Cosas, Big Data y Cloud Computing, y cómo interactúan entre sí.",
+    "audioUrl": "assets/audios/digitalizacion-02.mp3",
+    "transcript": "Aquí irá la transcripción completa del podcast 'Tecnologías habilitadoras' generada por NotebookLM.",
+    "summary": "Resumen del podcast 'Tecnologías habilitadoras'.",
+    "keyPoints": [
+      "Funciones y beneficios de la Inteligencia Artificial y el Machine Learning.",
+      "El rol del IoT en la interconexión de dispositivos y la recopilación de datos.",
+      "Big Data y análisis avanzado para la toma de decisiones.",
+      "Ventajas de la Computación en la Nube (Cloud Computing)."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Cloud y sistemas conectados",
+    "description": "Exploración en profundidad de la computación en la nube (Cloud Computing), sus modelos de servicio (IaaS, PaaS, SaaS) y cómo facilita la interconexión y colaboración de sistemas y dispositivos.",
+    "audioUrl": "assets/audios/digitalizacion-03.mp3",
+    "transcript": "Aquí irá la transcripción completa del podcast 'Cloud y sistemas conectados' generada por NotebookLM.",
+    "summary": "Resumen del podcast 'Cloud y sistemas conectados'.",
+    "keyPoints": [
+      "Definición y beneficios de Cloud Computing.",
+      "Modelos de servicio: IaaS, PaaS, SaaS.",
+      "Edge Computing y su relación con la nube.",
+      "Interoperabilidad y seguridad en entornos conectados."
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Inteligencia Artificial (IA)",
+    "description": "Conceptos fundamentales de la Inteligencia Artificial, sus ramas principales (ML, Deep Learning, NLP) y sus aplicaciones actuales y futuras en diversos ámbitos.",
+    "audioUrl": "assets/audios/digitalizacion-04.mp3",
+    "transcript": "Aquí irá la transcripción completa del podcast 'Inteligencia Artificial (IA)' generada por NotebookLM.",
+    "summary": "Resumen del podcast 'Inteligencia Artificial (IA)'.",
+    "keyPoints": [
+      "Qué es la IA y sus subcampos.",
+      "Algoritmos clave y técnicas de IA.",
+      "Aplicaciones de la IA en la vida cotidiana y la industria.",
+      "Consideraciones éticas y desafíos de la IA."
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Evaluación de datos",
+    "description": "Introducción a los conceptos de Big Data, las fases del análisis de datos (descriptivo, predictivo, prescriptivo) y las técnicas de minería de datos para extraer conocimiento.",
+    "audioUrl": "assets/audios/digitalizacion-05.mp3",
+    "transcript": "Aquí irá la transcripción completa del podcast 'Evaluación de datos' generada por NotebookLM.",
+    "summary": "Resumen del podcast 'Evaluación de datos'.",
+    "keyPoints": [
+      "Las 'Vs' del Big Data (Volumen, Velocidad, Variedad, Veracidad, Valor).",
+      "Ciclo de vida del análisis de datos.",
+      "Técnicas de minería de datos (Clustering, Clasificación, Regresión).",
+      "Herramientas y plataformas para el análisis de datos."
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Digitalización empresarial. Desarrollo de un proyecto",
+    "description": "Guía para la implementación de un proyecto de digitalización en una empresa, desde la planificación y evaluación de costes hasta la gestión del cambio y la ciberseguridad.",
+    "audioUrl": "assets/audios/digitalizacion-06.mp3",
+    "transcript": "Aquí irá la transcripción completa del podcast 'Digitalización empresarial. Desarrollo de un proyecto' generada por NotebookLM.",
+    "summary": "Resumen del podcast 'Digitalización empresarial. Desarrollo de un proyecto'.",
+    "keyPoints": [
+      "Fases de un proyecto de digitalización.",
+      "Coste de oportunidad y retorno de inversión (ROI).",
+      "Gestión del cambio y comunicación multicanal.",
+      "Ciberseguridad y protección de datos en la empresa digital."
+    ]
+  }
+]

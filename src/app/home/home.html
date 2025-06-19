@@ -1,15 +1,29 @@
-<div class="home-content">
-  <div class="button-container">
-    <!-- Botón para la sección de Tests -->
-    <button mat-raised-button color="primary" routerLink="/tests">
-      <span class="button-icon">🧠</span> TEST
-    </button>
+<!-- src/app/home/home.html -->
+<div class="home-container">
+  <div class="content-wrapper">
+    <!-- Columna de Botones PODCAST (Izquierda) -->
+    <div class="button-column left-column">
+      <button mat-fab extended color="primary" (click)="goToSubjects('podcast')" class="home-button podcast-button">
+        <!-- Icono de Podcast REINTRODUCIDO -->
+        <img src="https://img.icons8.com/ios-filled/48/000000/podcast.png" alt="Podcast Icon" class="button-icon-img">
+        <!-- Texto del botón -->
+        <span class="button-text-content">PODCAST</span>
+      </button>
+    </div>
 
-    <!-- Botón para la sección de Podcasts -->
-    <button mat-raised-button color="accent" routerLink="/podcasts">
-      <span class="button-icon">🎧</span> PODCAST
-    </button>
+    <!-- Contenedor central para la imagen PANDA -->
+    <div class="image-center">
+      <img src="assets/PANDA.png" alt="Panda Image" class="panda-image">
+    </div>
+
+    <!-- Columna de Botones TEST (Derecha) -->
+    <div class="button-column right-column">
+      <button mat-fab extended color="accent" (click)="goToSubjects('test')" class="home-button test-button">
+        <!-- Icono de Test REINTRODUCIDO -->
+        <img src="https://img.icons8.com/ios-filled/48/000000/test-passed.png" alt="Test Icon" class="button-icon-img">
+        <!-- Texto del botón -->
+        <span class="button-text-content">TEST</span>
+      </button>
+    </div>
   </div>
 </div>
-
-

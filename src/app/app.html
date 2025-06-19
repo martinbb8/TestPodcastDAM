@@ -1,21 +1,38 @@
-
+<!-- src/app/app.html -->
 <div class="main-container">
-  <!-- Header: Contiene la imagen DAM -->
+  <!-- Header: Nuevo diseño con texto "Dream And Make" -->
   <header class="app-header">
-    <img src="/assets/DAM.png" alt="Dream And Make Logo" class="logo-dam">
+    <div class="header-text-container">
+      <span class="header-word header-word1">
+        <span class="highlight-char">D</span><span class="normal-char">ream</span>
+      </span>
+      <span class="header-word header-word2">
+        <span class="highlight-char">A</span><span class="normal-char">nd</span>
+      </span>
+      <span class="header-word header-word3">
+        <span class="highlight-char">M</span><span class="normal-char">ake</span>
+      </span> 
+    </div>
   </header>
 
-  <!-- El router-outlet ahora está dentro de la etiqueta <main> -->
-  <!-- Esto significa que todo el contenido ruteado (HomeComponent, SubjectsComponent, TestComponent, etc.) -->
-  <!-- se cargará DENTRO de esta sección principal. -->
   <main class="app-main-content">
     <router-outlet></router-outlet>
   </main>
 
   <!-- Footer: Contiene la información de contacto y el enlace a GitHub -->
   <footer class="app-footer">
-    <p>Repositorio GitHub: <a href="https://github.com/TestPodcastDAM" target="_blank" rel="noopener noreferrer">TestPodcastDAM</a></p>
-    <p>Email: <a href="mailto:ciclismoacuatico@gmail.com">ciclismoacuatico&commat;gmail.com</a></p>
-    <p>Teléfono: <a href="tel:+34622045103">+34 622 04 51 03</a></p>
+    <div class="footer-content">
+      <p>
+        <a href="https://github.com/martinbb8/TestPodcastDAM" target="_blank" rel="noopener noreferrer">
+          <img src="https://img.icons8.com/ios-filled/24/ffffff/github.png" alt="GitHub Logo" class="icon"> Repositorio GitHub: TestPodcastDAM
+        </a>
+      </p>
+      <p>
+        <a href="mailto:ciclismoacuatico@gmail.com" target="_blank" rel="noopener noreferrer">
+          <img src="https://img.icons8.com/ios-filled/24/ffffff/email.png" alt="Email Icon" class="icon"> Email: ciclismoacuatico&#64;gmail.com
+        </a>
+      </p>
+      <p>&copy; 2025 Proyecto DAM</p>
+    </div>
   </footer>
 </div>

@@ -1,0 +1,50 @@
+<!-- src/app/podcast/podcast.html -->
+<div class="podcast-container" *ngIf="currentPodcast">
+  <h2>Podcasts de {{ displaySubjectName }}</h2>
+  
+  <div class="podcast-navigation">
+    <button mat-raised-button color="primary" (click)="previousPodcast()" [disabled]="currentPodcastIndex === 0">
+      <span class="button-icon">⏪</span> Anterior
+    </button>
+    <span>Episodio {{ currentPodcastIndex + 1 }} de {{ allPodcasts.length }}</span>
+    <button mat-raised-button color="primary" (click)="nextPodcast()" [disabled]="currentPodcastIndex === allPodcasts.length - 1">
+      Siguiente <span class="button-icon">⏩</span>
+    </button>
+  </div>
+
+  <div class="podcast-card">
+    <h3>{{ currentPodcast.title }}</h3>
+    <p class="podcast-description">{{ currentPodcast.description }}</p>
+
+    <!-- Reproductor de Audio HTML5 -->
+    <!-- El atributo 'src' se enlaza dinámicamente al 'audioUrl' del podcast actual -->
+    <audio controls [src]="currentPodcast.audioUrl" class="audio-player">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <div class="podcast-details">
+
+      <!-- Muestra los puntos clave solo si existen -->
+      <h4 *ngIf="currentPodcast.keyPoints && currentPodcast.keyPoints.length > 0">Puntos Clave:</h4>
+      <ul *ngIf="currentPodcast.keyPoints && currentPodcast.keyPoints.length > 0">
+        <li *ngFor="let point of currentPodcast.keyPoints">{{ point }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Botón para volver a la lista de asignaturas -->
+  <div class="navigation-actions">
+    <button mat-stroked-button color="basic" (click)="goToSubjects()">
+      <span class="button-icon">🔙</span> Volver a Asignaturas
+    </button>
+  </div>
+</div>
+
+<!-- Mensaje de carga mientras se obtienen los datos -->
+<div class="loading-message" *ngIf="!currentPodcast && subjectName">
+  Cargando podcasts para {{ displaySubjectName }}...
+</div>
+<!-- Mensaje de error si no se proporciona el nombre de la asignatura -->
+<div *ngIf="!subjectName" class="error-message">
+  Por favor, selecciona una asignatura para escuchar podcasts.
+</div>
