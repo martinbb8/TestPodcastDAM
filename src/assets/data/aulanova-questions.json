@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "questionText": "¿Cuál es el componente del computador conocido como el 'cerebro', encargado de coordinar elementos y ejecutar aplicaciones?",
+    "options": [
+      "Memoria RAM",
+      "Disco Duro",
+      "Procesador (CPU)",
+      "Tarjeta Gráfica"
+    ],
+    "correctAnswer": "Procesador (CPU)",
+    "explanation": "El procesador (CPU) es el cerebro del computador, encargado de coordinar sus elementos, ejecutar aplicaciones y procesar instrucciones."
+  },
+  {
+    "id": 2,
+    "questionText": "Dentro del procesador, ¿qué componente es un sistema de memoria vital para acelerar el acceso a los datos frecuentemente utilizados?",
+    "options": [
+      "Controlador de memoria",
+      "Bus de sistema",
+      "Núcleo",
+      "Caché"
+    ],
+    "correctAnswer": "Caché",
+    "explanation": "La memoria caché está ubicada cerca del procesador para acelerar el acceso a la memoria RAM, almacenando datos usados con frecuencia."
+  },
+  {
+    "id": 3,
+    "questionText": "¿Qué nivel de caché es el más cercano al procesador, el más rápido y de menor capacidad?",
+    "options": [
+      "L4",
+      "L3",
+      "L2",
+      "L1"
+    ],
+    "correctAnswer": "L1",
+    "explanation": "L1 es el nivel de caché más cercano al procesador, siendo el más rápido y de menor capacidad."
+  },
+  {
+    "id": 4,
+    "questionText": "¿Cómo se denomina un procesador que tiene una tarjeta gráfica integrada?",
+    "options": [
+      "GPU",
+      "APU",
+      "ALU",
+      "MPU"
+    ],
+    "correctAnswer": "APU",
+    "explanation": "Si una tarjeta gráfica está integrada en el procesador, este se denomina APU (Accelerated Processing Unit)."
+  },
+  {
+    "id": 5,
+    "questionText": "¿Qué característica es la más importante para el rendimiento final de un procesador, permitiendo la ejecución paralela de programas?",
+    "options": [
+      "La velocidad de un solo núcleo",
+      "La tecnología de núcleos múltiples",
+      "El tamaño de la memoria caché L4",
+      "La frecuencia del bus de sistema"
+    ],
+    "correctAnswer": "La tecnología de núcleos múltiples",
+    "explanation": "La tecnología de núcleos múltiples es crucial para el rendimiento final, ya que permite la ejecución paralela de programas y una mayor velocidad de trabajo."
+  },
+  {
+    "id": 6,
+    "questionText": "¿Qué tipo de procesador (CISC o RISC) maneja un conjunto extenso de instrucciones complejas y se basa en microprogramación?",
+    "options": [
+      "RISC",
+      "ARM",
+      "CISC",
+      "DSP"
+    ],
+    "correctAnswer": "CISC",
+    "explanation": "Los procesadores CISC manejan un conjunto extenso de instrucciones complejas y se basan en microprogramación, descomponiendo instrucciones en microinstrucciones."
+  },
+  {
+    "id": 7,
+    "questionText": "¿Cuál es una ventaja de los procesadores RISC en comparación con los CISC?",
+    "options": [
+      "Utilizan microprogramación para instrucciones complejas.",
+      "Su hardware es más complejo, lo que puede ralentizar su funcionamiento.",
+      "Son más económicos de fabricar debido a menos elementos.",
+      "Permiten longitudes de instrucción más versátiles."
+    ],
+    "correctAnswer": "Son más económicos de fabricar debido a menos elementos.",
+    "explanation": "Los procesadores RISC son más económicos de fabricar debido a que tienen menos elementos y transistores, lo que simplifica su microarquitectura."
+  },
+  {
+    "id": 8,
+    "questionText": "¿Qué tipo de instrucción de procesador es la responsable de transferencias de datos con periféricos?",
+    "options": [
+      "Aritméticas",
+      "Control de Flujo",
+      "Entrada/Salida",
+      "Lógicas"
+    ],
+    "correctAnswer": "Entrada/Salida",
+    "explanation": "Las instrucciones de Entrada/Salida gestionan las transferencias de datos entre el procesador y los periféricos."
+  },
+  {
+    "id": 9,
+    "questionText": "¿Qué registro guarda los resultados de operaciones aritméticas en el procesador?",
+    "options": [
+      "Registro de Instrucción",
+      "Contador Ordinal",
+      "Acumulador",
+      "Registro del Búfer"
+    ],
+    "correctAnswer": "Acumulador",
+    "explanation": "El Acumulador es un registro dentro del procesador que guarda temporalmente los resultados de las operaciones aritméticas."
+  },
+  {
+    "id": 10,
+    "questionText": "¿Cuál es la función principal de la Unidad Aritmético-Lógica (ALU)?",
+    "options": [
+      "Gestionar las interrupciones del sistema.",
+      "Realizar operaciones aritméticas y lógicas.",
+      "Controlar el acceso a la memoria RAM.",
+      "Guardar la dirección de la próxima instrucción."
+    ],
+    "correctAnswer": "Realizar operaciones aritméticas y lógicas.",
+    "explanation": "La Unidad Aritmético-Lógica (ALU) es un circuito digital encargado de realizar operaciones aritméticas (sumas, restas) y lógicas (comparaciones)."
+  },
+  {
+    "id": 11,
+    "questionText": "¿Qué son las interrupciones en el contexto de un procesador?",
+    "options": [
+      "Errores de software que detienen el sistema indefinidamente.",
+      "Eventos que cambian la secuencia en la que el procesador realiza las instrucciones.",
+      "Instrucciones de alto nivel para optimizar el rendimiento.",
+      "Procesos internos del procesador para autodiagnóstico."
+    ],
+    "correctAnswer": "Eventos que cambian la secuencia en la que el procesador realiza las instrucciones.",
+    "explanation": "Las interrupciones son eventos que alteran la secuencia normal de ejecución de instrucciones del procesador, pudiendo ser causadas por hardware o errores de programa."
+  },
+  {
+    "id": 12,
+    "questionText": "¿Qué característica define a la memoria RAM como 'volátil'?",
+    "options": [
+      "Su capacidad es limitada.",
+      "Pierde la información al apagar el ordenador.",
+      "Permite solo operaciones de lectura.",
+      "Es una memoria externa al procesador."
+    ],
+    "correctAnswer": "Pierde la información al apagar el ordenador.",
+    "explanation": "La memoria RAM es volátil porque pierde toda la información almacenada en el momento en que se interrumpe el suministro de energía al ordenador."
+  },
+  {
+    "id": 13,
+    "questionText": "¿Qué tipo de RAM utiliza flip-flops, no pierde información con alimentación y se usa como memoria caché?",
+    "options": [
+      "DRAM",
+      "SDRAM",
+      "SRAM",
+      "DDR"
+    ],
+    "correctAnswer": "SRAM",
+    "explanation": "La RAM estática (SRAM) utiliza flip-flops, mantiene la información mientras haya alimentación y es de alta velocidad, ideal para memoria caché."
+  },
+  {
+    "id": 14,
+    "questionText": "¿Cuál es la principal diferencia de DDR respecto a SDRAM?",
+    "options": [
+      "DDR solo realiza una transferencia de datos por ciclo de reloj.",
+      "DDR es físicamente compatible con SDRAM.",
+      "DDR realiza dos transferencias de datos por ciclo de reloj.",
+      "DDR se utiliza exclusivamente para memoria caché."
+    ],
+    "correctAnswer": "DDR realiza dos transferencias de datos por ciclo de reloj.",
+    "explanation": "La principal diferencia es que la memoria DDR (Double Data Rate) realiza dos transferencias de datos por ciclo de reloj, a diferencia de la SDRAM que realiza solo una."
+  },
+  {
+    "id": 15,
+    "questionText": "¿Qué tipo de memoria (xPROM) es de solo lectura y no volátil, utilizada para el arranque del ordenador (BIOS)?",
+    "options": [
+      "Memoria RAM",
+      "Memoria DRAM",
+      "Memoria EEPROM",
+      "Memoria ROM"
+    ],
+    "correctAnswer": "Memoria ROM",
+    "explanation": "Las memorias xPROM, como la ROM, son de solo lectura y no volátiles, lo que las hace adecuadas para almacenar el firmware de arranque del ordenador (BIOS)."
+  },
+  {
+    "id": 16,
+    "questionText": "¿Qué tipo de disco utiliza memoria no volátil, similar a la flash, y ofrece arranque y lectura/escritura mucho más rápidos que un HDD?",
+    "options": [
+      "Disco mecánico (HDD)",
+      "Disco SCSI",
+      "Disco de estado sólido (SSD)",
+      "Disco ATA/IDE"
+    ],
+    "correctAnswer": "Disco de estado sólido (SSD)",
+    "explanation": "Los discos de estado sólido (SSD) utilizan memoria flash, lo que les permite un arranque y velocidades de lectura/escritura significativamente más rápidos que los discos duros mecánicos (HDD)."
+  },
+  {
+    "id": 17,
+    "questionText": "¿Cuál es el principal inconveniente de los discos SSD en comparación con los HDD?",
+    "options": [
+      "Mayor latencia en la lectura de datos.",
+      "Requieren un refresco continuo para mantener los datos.",
+      "Su precio es más alto y tienen menor vida útil por ciclos de escritura/lectura.",
+      "Son más sensibles a golpes y caídas."
+    ],
+    "correctAnswer": "Su precio es más alto y tienen menor vida útil por ciclos de escritura/lectura.",
+    "explanation": "Los SSD son más caros que los HDD y tienen una vida útil limitada por un número máximo de ciclos de escritura/lectura."
+  },
+  {
+    "id": 18,
+    "questionText": "¿Qué interfaz de disco es el estándar actual, ofrece mayor velocidad de transferencia que ATA y usa cables más finos?",
+    "options": [
+      "ATA/IDE",
+      "SCSI",
+      "SATA",
+      "USB"
+    ],
+    "correctAnswer": "SATA",
+    "explanation": "SATA es el estándar actual para interfaces de disco, ofreciendo mayor velocidad de transferencia y utilizando conectores y cables más pequeños y flexibles que ATA/IDE."
+  },
+  {
+    "id": 19,
+    "questionText": "¿Cuál es la función principal de un Sistema Operativo (SO) como intermediario entre el usuario y el hardware?",
+    "options": [
+      "Ejecutar únicamente una aplicación a la vez.",
+      "Realizar el diseño gráfico de la interfaz.",
+      "Controlar el hardware para el usuario y gestionar el funcionamiento del ordenador.",
+      "Almacenar permanentemente todos los datos del usuario."
+    ],
+    "correctAnswer": "Controlar el hardware para el usuario y gestionar el funcionamiento del ordenador.",
+    "explanation": "El SO actúa como intermediario para controlar el hardware y gestionar el funcionamiento del ordenador, creando un entorno eficiente para el usuario."
+  },
+  {
+    "id": 20,
+    "questionText": "¿Qué es un proceso en el contexto de un sistema operativo?",
+    "options": [
+      "Una carpeta donde se guardan archivos.",
+      "Un programa en ejecución al que la CPU asigna recursos.",
+      "Una instrucción individual que la CPU puede leer.",
+      "Un componente físico de la memoria RAM."
+    ],
+    "correctAnswer": "Un programa en ejecución al que la CPU asigna recursos.",
+    "explanation": "Un proceso es un programa en ejecución, un conjunto dinámico de instrucciones que la CPU lleva a cabo, y al que el SO asigna recursos como CPU y memoria."
+  },
+  {
+    "id": 21,
+    "questionText": "¿Qué tipo de proceso consume recursos propios pero es dependiente del proceso que lo generó y permite varias acciones simultáneas?",
+    "options": [
+      "Bloque de control de proceso (PCB)",
+      "Hebra (hilo)",
+      "Proceso en espera",
+      "Proceso padre"
+    ],
+    "correctAnswer": "Hebra (hilo)",
+    "explanation": "Una hebra (o hilo) es un proceso dentro de otro proceso, que consume sus propios recursos pero depende de su proceso padre, permitiendo acciones simultáneas dentro del mismo programa."
+  },
+  {
+    "id": 22,
+    "questionText": "¿Cuál es la técnica que permite a los programas ejecutarse cargados solo parcialmente en la memoria principal, usando el disco duro como almacenamiento secundario?",
+    "options": [
+      "Paginación",
+      "Segmentación",
+      "Memoria Virtual",
+      "Memoria Caché"
+    ],
+    "correctAnswer": "Memoria Virtual",
+    "explanation": "La memoria virtual es una técnica que permite ejecutar programas más grandes que la memoria física disponible, cargándolos solo parcialmente y usando el disco duro como extensión."
+  },
+  {
+    "id": 23,
+    "questionText": "En la paginación, ¿cómo se dividen los programas y la memoria principal respectivamente?",
+    "options": [
+      "En segmentos y bloques.",
+      "En registros y campos.",
+      "En páginas y marcos de página.",
+      "En archivos y directorios."
+    ],
+    "correctAnswer": "En páginas y marcos de página.",
+    "explanation": "La paginación divide los programas en 'páginas' y la memoria principal en 'marcos de página' del mismo tamaño, facilitando la gestión de la memoria y reduciendo la fragmentación."
+  },
+  {
+    "id": 24,
+    "questionText": "¿Qué sistema de archivos de Windows ofrece seguridad completa (permisos, cifrado) y utiliza un registro transaccional para la integridad del sistema?",
+    "options": [
+      "FAT16",
+      "FAT32",
+      "EXT4",
+      "NTFS"
+    ],
+    "correctAnswer": "NTFS",
+    "explanation": "NTFS es el sistema de archivos moderno de Windows, conocido por su seguridad (permisos, cifrado) y su capacidad de journaling (registro transaccional) para garantizar la integridad ante fallos."
+  },
+  {
+    "id": 25,
+    "questionText": "¿Cuál es el concepto que permite que múltiples sistemas físicos actúen como un único sistema lógico o viceversa, optimizando el uso de recursos y reduciendo costes?",
+    "options": [
+      "Emulación",
+      "Contenedorización",
+      "Virtualización",
+      "Clustering"
+    ],
+    "correctAnswer": "Virtualización",
+    "explanation": "La virtualización permite que sistemas físicos actúen como uno lógico o que uno físico se divida en varios lógicos, optimizando recursos y reduciendo costes."
+  },
+  {
+    "id": 26,
+    "questionText": "¿Qué término se refiere a la capa de software que se ejecuta directamente sobre el hardware de la máquina anfitriona para monitorizar y gestionar las máquinas virtuales?",
+    "options": [
+      "Sistema Operativo Invitado",
+      "Máquina Virtual (MV)",
+      "Hipervisor (monitor)",
+      "Driver"
+    ],
+    "correctAnswer": "Hipervisor (monitor)",
+    "explanation": "Un hipervisor (o monitor) es la capa de software que gestiona las máquinas virtuales, controlando el acceso al hardware y monitorizando sus operaciones."
+  },
+  {
+    "id": 27,
+    "questionText": "¿Qué tipo de virtualización de plataforma no emula hardware y requiere modificar los sistemas operativos invitados para colaborar con el hipervisor, mejorando el rendimiento?",
+    "options": [
+      "Virtualización completa (nativa)",
+      "Emulación",
+      "Paravirtualización",
+      "Virtualización a nivel de sistema operativo"
+    ],
+    "correctAnswer": "Paravirtualización",
+    "explanation": "La paravirtualización no emula hardware y requiere que los sistemas operativos invitados sean modificados para comunicarse y colaborar directamente con el hipervisor, mejorando el rendimiento."
+  },
+  {
+    "id": 28,
+    "questionText": "¿Qué medida se refiere a la capacidad de un sistema para responder a las solicitudes en un tiempo determinado, siendo un indicador clave de su rendimiento?",
+    "options": [
+      "Frecuencia del reloj",
+      "Tiempo de respuesta total (TURNAROUND TIME)",
+      "Cantidad de instrucciones (IPC)",
+      "Ancho de banda"
+    ],
+    "correctAnswer": "Tiempo de respuesta total (TURNAROUND TIME)",
+    "explanation": "El tiempo de respuesta total (TURNAROUND TIME) mide la capacidad de un sistema para responder a las solicitudes, siendo un parámetro clave de su rendimiento."
+  },
+  {
+    "id": 29,
+    "questionText": "¿Cuál es un algoritmo de planificación de procesos que permite al SO interrumpir un proceso en ejecución para dar paso a otro con mayor prioridad?",
+    "options": [
+      "FCFS (First-Come, First-Served)",
+      "SJF (Shortest Job First)",
+      "Round-Robin (Round-Robin sin interrupción)",
+      "Apropiativo (Preemptive)"
+    ],
+    "correctAnswer": "Apropiativo (Preemptive)",
+    "explanation": "Un algoritmo de planificación es apropiativo si puede interrumpir un proceso en ejecución para asignar la CPU a otro proceso de mayor prioridad."
+  },
+  {
+    "id": 30,
+    "questionText": "¿Qué tipo de organización de sistemas operativos para multiprocesador permite que todos los procesadores sean iguales y realicen cualquier función, ofreciendo robustez y equilibrio de carga?",
+    "options": [
+      "Maestro/Satélite",
+      "Ejecutivos Separados",
+      "Tratamiento Simétrico (SMP)",
+      "MIMD"
+    ],
+    "correctAnswer": "Tratamiento Simétrico (SMP)",
+    "explanation": "El tratamiento simétrico (SMP) es una organización donde todos los procesadores son iguales y pueden realizar cualquier función, lo que proporciona robustez, fiabilidad y un equilibrio de carga específico."
+  }
+]

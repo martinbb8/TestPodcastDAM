@@ -1,153 +1,105 @@
 /* src/app/home/home.css */
 .home-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: calc(100vh - 120px - 64px); /* Ajusta la altura para ocupar el espacio central */
-  background-color: #ffffff; /* Fondo blanco inicial */
-  flex-grow: 1;
+  flex-direction: column; /* Apila las secciones de asignatura verticalmente */
+  align-items: center; /* Centra las secciones horizontalmente */
   padding: 20px;
+  gap: 30px; /* Espacio entre cada sección de asignatura */
+  background-color: #f0f2f5; /* Fondo suave para toda la página */
+  flex-grow: 1; /* Ocupa el espacio disponible del main */
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
 
-.content-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  gap: 30px;
-  flex-wrap: nowrap; /* Evita que los elementos se envuelvan en escritorio */
-}
-
-.button-column {
-  display: flex;
-  flex-direction: column; /* Por si en el futuro hay más de un botón por columna */
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-/* Estilos de los botones TEST y PODCAST */
-.home-button {
-  width: 120px; /* Ancho ajustado para icon+text */
-  height: 180px; /* Altura ajustada para icon+text */
+.subject-section {
+  background-color: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column; /* Por defecto, icono encima del texto */
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  font-size: 1.2em;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  width: 100%;
+  max-width: 900px; /* Ancho máximo de cada sección de asignatura */
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+.subject-title {
+  color: #3f51b5; /* Color del título de la asignatura */
+  margin-bottom: 20px;
+  font-size: 2em;
   font-weight: bold;
+}
+
+.subject-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Botones responsivos */
+  gap: 10px; /* Espacio entre los botones */
+  margin-top: 15px;
+}
+
+.content-button {
+  padding: 15px 10px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  color: #000000; /* Texto negro */
+  display: flex; /* Para alinear icono y texto */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  gap: 8px; /* Espacio entre icono y texto */
+  background-color: #8d3535 !important; /* Color de fondo por defecto para los botones */
+  color: #ffffff; /* Color de texto por defecto para los botones */
 }
 
-.home-button:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
-}
-
-/* Colores de fondo específicos para cada botón */
-.podcast-button {
-  background-color: #8d3535; /* ¡Color rojo del header! */
-}
-
-.test-button {
-  background-color: #1d5c1d; /* Verde oscuro */
+.content-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .button-icon-img {
-  width: 48px; /* Tamaño del icono */
-  height: 48px;
-  margin-bottom: 10px; /* Espacio entre el icono y el texto en desktop */
+  width: 24px; /* Tamaño del icono */
+  background-color: aqua;
+  height: 24px;
 }
 
-.button-text-content {
-  font-size: 1.2em; /* Tamaño de fuente para el texto */
-  white-space: nowrap; /* Evita que el texto se rompa */
-}
-
-
-/* Estilos para la imagen central */
-.image-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.panda-image {
-  max-width: 56%; /* ¡REDUCIDO un 30% (de 80% a 56%) para escritorio! */
-  height: auto;
-  display: block;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* -------------------------------------- */
 /* Media Queries para Responsividad */
-/* -------------------------------------- */
-
-/* Para tablets y móviles más grandes: disposición horizontal de los botones */
 @media (max-width: 768px) {
-  .content-wrapper {
-    flex-direction: column; /* Apila los elementos: Imagen arriba, luego botones */
-    gap: 40px;
+  .home-container {
+    padding: 15px;
+    gap: 20px;
   }
-
-  .image-center {
-    order: -1; /* Mueve la imagen al principio en móviles para que aparezca arriba */
-    margin-bottom: 20px;
+  .subject-section {
+    padding: 20px;
+    width: 95%;
   }
-
-  .button-column {
-    flex-direction: row; /* Los botones se ponen en fila */
-    justify-content: center; /* Centra los botones en la pantalla */
-    width: 100%; /* Ocupa todo el ancho disponible */
-    gap: 20px; /* Espacio entre los botones */
+  .subject-title {
+    font-size: 1.8em;
+    margin-bottom: 15px;
   }
-
-  .home-button {
-    width: 140px; /* Ajusta el ancho para el icono a la izquierda */
-    height: 60px; /* Altura más compacta para disposición horizontal */
-    flex-direction: row; /* Icono a la izquierda, texto a la derecha */
-    justify-content: flex-start; /* Alinea contenido al inicio del botón */
-    padding: 10px 15px; /* Relleno ajustado */
+  .subject-buttons {
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    gap: 10px;
   }
-
+  .content-button {
+    font-size: 1em;
+    padding: 12px 15px;
+  }
   .button-icon-img {
-    width: 32px; /* Icono más pequeño en móvil */
-    height: 32px;
-    margin-bottom: 0; /* Elimina margen inferior */
-    margin-right: 10px; /* Espacio a la derecha del icono */
-  }
-
-  .button-text-content {
-    font-size: 1em; /* Ajusta el tamaño de la fuente en móvil */
-  }
-
-  .panda-image {
-    max-width: 81%; /* ¡REDUCIDO un 10% (de 90% a 81%) para móvil! */
+    width: 20px;
+    height: 20px;
   }
 }
 
-/* Para móviles pequeños */
 @media (max-width: 480px) {
-  .home-button {
-    width: 120px; /* Reduce un poco más el ancho del botón */
-    height: 50px; /* Reduce un poco más la altura */
-    padding: 8px 12px;
+  .subject-section {
+    padding: 15px;
   }
-  .button-icon-img {
-    width: 28px;
-    height: 28px;
-    margin-right: 8px;
+  .subject-title {
+    font-size: 1.5em;
   }
-  .button-text-content {
+  .content-button {
     font-size: 0.9em;
+    padding: 10px 12px;
   }
 }

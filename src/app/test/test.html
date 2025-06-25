@@ -1,73 +1,65 @@
-
-<div class="test-container" *ngIf="!testFinished && currentQuestion">
-  <h2>Test de {{ displaySubjectName }}</h2>
-  <div class="question-progress">
-    Pregunta {{ currentQuestionIndex + 1 }} de {{ shuffledQuestions.length }}
+<!-- src/app/test/test.html -->
+<div class="test-modal-container" *ngIf="currentQuestion || testFinished">
+  <div class="modal-header">
+    <h2>Test de {{ displaySubjectName }}</h2>
+    <button mat-icon-button (click)="closeTestModal()" aria-label="Cerrar test">
+      <mat-icon>close</mat-icon>
+    </button>
   </div>
 
-  <div class="question-card">
-    <p class="question-text">{{ currentQuestion.questionText }}</p>
+  <div class="modal-content">
+    <div *ngIf="!testFinished">
+      <p class="question-text">
+        {{ currentQuestionIndex + 1 }}. {{ currentQuestion?.questionText }}
+      </p>
+      <div class="options-container">
+        <button
+          *ngFor="let option of shuffledOptions"
+          mat-stroked-button
+          [class.selected]="selectedAnswer === option"
+          [class.correct]="isAnswered && option === currentQuestion?.correctAnswer"
+          [class.incorrect]="isAnswered && option === selectedAnswer && option !== currentQuestion?.correctAnswer"
+          (click)="selectAnswer(option)"
+          [disabled]="isAnswered"
+        >
+          {{ option }}
+        </button>
+      </div>
 
-    <div class="options-grid">
+      <div *ngIf="isAnswered" class="answer-feedback">
+        <p *ngIf="isCorrect" class="correct-feedback">¡Correcto!</p>
+        <p *ngIf="!isCorrect" class="incorrect-feedback">
+          ¡Incorrecto! La respuesta correcta era: {{ currentQuestion?.correctAnswer }}
+        </p>
+        <p class="explanation">{{ currentQuestion?.explanation }}</p>
+      </div>
+
       <button
         mat-raised-button
-        *ngFor="let option of shuffledOptions"
-        [color]="isAnswered ? (option === currentQuestion.correctAnswer ? 'primary' : (option === selectedAnswer ? 'warn' : '')) : ''"
-        [disabled]="isAnswered"
-        (click)="selectAnswer(option)"
+        color="primary"
+        (click)="nextQuestion()"
+        [disabled]="!isAnswered"
+        class="next-button"
       >
-        {{ option }}
+        {{ currentQuestionIndex === shuffledQuestions.length - 1 ? 'Finalizar Test' : 'Siguiente Pregunta' }}
       </button>
     </div>
 
-    <!-- Sección de Feedback y Explicación -->
-    <div *ngIf="isAnswered" class="feedback-section">
-      <p [ngClass]="{'correct-feedback': isCorrect, 'incorrect-feedback': !isCorrect}">
-        {{ isCorrect ? '¡Correcto!' : 'No es correcto.' }}
-      </p>
-      <!-- Mostrar respuesta correcta si es incorrecto -->
-      <p *ngIf="!isCorrect && selectedAnswer" class="correct-answer-display">
-        La respuesta correcta es: <strong>"{{ currentQuestion.correctAnswer }}"</strong>
-      </p>
-      <div class="explanation-box">
-        <p><strong>Explicación:</strong> {{ currentQuestion.explanation }}</p>
+    <div *ngIf="testFinished" class="test-results">
+      <h3>Test Finalizado</h3>
+      <p class="final-score">{{ finalScoreMessage }}</p>
+      <div class="result-actions">
+        <button mat-raised-button color="primary" (click)="restartTest()">
+          Repetir Test
+        </button>
+        <button mat-raised-button color="basic" (click)="closeTestModal()">
+          Cerrar
+        </button>
       </div>
-      <button mat-raised-button color="accent" (click)="nextQuestion()">
-        {{ currentQuestionIndex < (shuffledQuestions.length - 1) ? 'Siguiente Pregunta' : 'Finalizar Test' }} <span class="button-icon">➡️</span>
-      </button>
     </div>
   </div>
-
-  <!-- Botón para volver a la lista de asignaturas/inicio -->
-  <div class="navigation-actions">
-    <button mat-stroked-button color="basic" (click)="goToSubjects()">
-      <span class="button-icon">🔙</span> Volver a Asignaturas
-    </button>
-  </div>
 </div>
 
-<!-- Pantalla de Resultados Finales -->
-<div class="test-results-container" *ngIf="testFinished">
-  <h2>Test Finalizado</h2>
-  <p class="final-score-message">{{ finalScoreMessage }}</p>
-  <p class="fault-summary">Respuestas incorrectas iniciales: {{ incorrectAnswersCount }}</p>
-  <p class="fault-summary">Fallos adicionales aplicados: {{ calculateAdditionalFaults(incorrectAnswersCount) }}</p>
-  
-  <div class="results-actions">
-    <button mat-raised-button color="primary" (click)="restartTest()">
-      <span class="button-icon">🔄</span> Repetir Test
-    </button>
-    <button mat-stroked-button color="basic" (click)="goToSubjects()">
-      <span class="button-icon">🔙</span> Volver a Asignaturas
-    </button>
-  </div>
+<div class="loading-message" *ngIf="!currentQuestion && !testFinished && displaySubjectName">
+  Cargando preguntas para {{ displaySubjectName }}...
 </div>
-
-<!-- Mensajes de carga/error -->
-<div class="loading-message" *ngIf="!currentQuestion && subjectName && !testFinished">
-  Cargando test para {{ displaySubjectName }}...
-</div>
-<div *ngIf="!subjectName" class="error-message">
-  Por favor, selecciona una asignatura para iniciar un test.
-</div>
-

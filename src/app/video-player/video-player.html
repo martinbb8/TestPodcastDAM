@@ -1,0 +1,101 @@
+<!-- src/app/video-player/video-player.html -->
+
+<!-- Contenedor principal del reproductor de video -->
+<!-- Utiliza clases de Tailwind CSS para un diseño responsivo y moderno. -->
+<div class="video-player-container flex flex-col items-center p-4 bg-gray-50 min-h-screen">
+
+  <!-- Contenedor principal del reproductor de video y los controles -->
+  <!-- Aquí hemos incluido ahora el título principal de la asignatura -->
+  <div class="video-content w-full max-w-4xl bg-white p-8 rounded-xl shadow-xl border-t-4 border-blue-400">
+
+    <!-- Sección del encabezado con el nombre de la asignatura -->
+    <h1 class="subject-main-title text-3xl font-extrabold text-center text-blue-700 py-4 px-6 bg-white rounded-xl shadow-lg border-b-4 border-blue-500 mb-6">
+      {{ displaySubjectName }}
+    </h1>
+
+    <!-- Mensaje de error (si existe) -->
+    <div *ngIf="errorMessage" class="error-message p-5 mb-6 text-red-800 bg-red-100 border border-red-500 rounded-lg text-center font-medium">
+      <p>{{ errorMessage }}</p>
+      <p class="mt-3 text-sm text-red-700">
+        Este mensaje indica que hay un problema. Si el video no carga,
+        podría ser un bloqueo de incrustación de la plataforma (Vimeo, YouTube)
+        o un problema con la ruta del archivo JSON.
+        <!-- Botón para volver a inicio, útil si hay un error y no hay videos -->
+        <button mat-stroked-button color="accent" (click)="goToHome()" class="back-button-error mt-4">
+          Inicio
+        </button>
+      </p>
+    </div>
+
+    <!-- Título del video actual (se muestra si hay un video cargado) -->
+    <h2 *ngIf="currentVideo" class="video-title text-2xl font-bold mb-6 text-gray-900 text-center">
+      {{ currentVideo.title }}
+    </h2>
+    <!-- Mensaje de bienvenida si no hay video cargado y no hay error -->
+    <h2 *ngIf="!currentVideo && !errorMessage" class="video-title text-2xl font-bold mb-6 text-gray-600 text-center">
+      Bienvenido al Reproductor de Videos
+    </h2>
+
+    <!-- Reproductor de video (iframe) o mensaje de placeholder -->
+    <!-- -------------------- INICIO MODIFICACIÓN -------------------- -->
+    <!-- Volvemos a flex, y confiamos en el CSS para forzar el tamaño de los hijos. -->
+    <div class="video-frame-wrapper aspect-video bg-gray-200 rounded-xl shadow-inner overflow-hidden flex items-center justify-center">
+      <ng-container *ngIf="safeVideoUrl; else noVideoPlaceholder">
+        <iframe
+          [src]="safeVideoUrl"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
+          class="w-full h-full"
+          title="{{ currentVideo?.title || 'Video Player' }}"
+        ></iframe>
+      </ng-container>
+      <ng-template #noVideoPlaceholder>
+        <!-- Mantener flex en el div interno para centrar su propio contenido. -->
+        <div class="text-center text-gray-500 p-8 w-full h-full flex flex-col justify-center items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 mx-auto mb-4 text-gray-400">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.604 3.113a.375.375 0 0 1-.557-.327V8.887c0-.286.307-.466.557-.327l5.604 3.113Z" />
+          </svg>
+          <p class="text-xl font-semibold">No hay video cargado o seleccionado.</p>
+          <p class="text-md mt-2">Usa los botones de navegación o verifica la carga de videos.</p>
+        </div>
+      </ng-template>
+    </div>
+    <!-- -------------------- FIN MODIFICACIÓN -------------------- -->
+
+    <!-- Controles de navegación del video y botón Inicio -->
+    <div class="video-navigation mt-8 flex justify-between items-center w-full">
+      <div class="flex space-x-6">
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="previousVideo()"
+          [disabled]="currentVideoIndex === 0 || allVideos.length === 0"
+          class="nav-button bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 ease-in-out shadow-lg transform hover:scale-105 disabled:opacity-40 disabled:cursor-not-allowed"
+        >
+          Anterior
+        </button>
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="nextVideo()"
+          [disabled]="currentVideoIndex === allVideos.length - 1 || allVideos.length === 0"
+          class="nav-button bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 ease-in-out shadow-lg transform hover:scale-105 disabled:opacity-40 disabled:cursor-not-allowed"
+        >
+          Siguiente
+        </button>
+      </div>
+
+      <!-- Botón Inicio -->
+      <button
+        mat-stroked-button
+        color="accent"
+        (click)="goToHome()"
+        class="home-button border-purple-600 text-purple-700 hover:bg-purple-50 focus:ring-purple-600 transition-all duration-300 ease-in-out py-3 px-10 rounded-full shadow-md transform hover:translate-y-0.5"
+      >
+        Inicio
+      </button>
+    </div>
+  </div>
+</div>

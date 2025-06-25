@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Unidad 1 - Digitalización en los Sectores Productivos",
+    "pdfUrl": "/assets/PDFS/Digitalizacion-Aplicada/UT1-Digitalizacion-en-los-sectores-productivos.pdf"
+  },
+  {
+    "id": 2,
+    "title": "Unidad 2 - Tecnologías Habilitadoras",
+    "pdfUrl": "/assets/PDFS/Digitalizacion-Aplicada/UT2-Tecnologias-habilitadoras.pdf"
+  },
+  {
+    "id": 3,
+    "title": "Unidad 3 - Cloud y Sistemas Conectados",
+    "pdfUrl": "/assets/PDFS/Digitalizacion-Aplicada/UT3-Cloud-y-sistemas-conectados.pdf"
+  },
+  {
+    "id": 4,
+    "title": "Unidad 4 - Inteligencia Artificial (IA)",
+    "pdfUrl": "/assets/PDFS/Digitalizacion-Aplicada/UT4-Inteligencia-Artificial-IA.pdf"
+  },
+  {
+    "id": 5,
+    "title": "Unidad 5 - Evaluación de Datos",
+    "pdfUrl": "/assets/PDFS/Digitalizacion-Aplicada/UT5-Evaluacion-de-datos.pdf"
+  },
+  {
+    "id": 6,
+    "title": "Unidad 6 - Digitalización Empresarial y Desarrollo de Proyectos",
+    "pdfUrl": "/assets/PDFS/Digitalizacion-Aplicada/UT6-Digitalizacion-empresarial-Desarrollo-de-un-proyecto.pdf"
+  }
+]

@@ -1,28 +1,30 @@
 <!-- src/app/home/home.html -->
 <div class="home-container">
-  <div class="content-wrapper">
-    <!-- Columna de Botones PODCAST (Izquierda) -->
-    <div class="button-column left-column">
-      <button mat-fab extended color="primary" (click)="goToSubjects('podcast')" class="home-button podcast-button">
-        <!-- Icono de Podcast REINTRODUCIDO -->
-        <img src="https://img.icons8.com/ios-filled/48/000000/podcast.png" alt="Podcast Icon" class="button-icon-img">
-        <!-- Texto del botón -->
-        <span class="button-text-content">PODCAST</span>
+  <!-- Iteramos sobre la lista de asignaturas y creamos una sección para cada una -->
+  <div class="subject-section" *ngFor="let subject of subjects">
+    <!-- El "label" de la asignatura -->
+    <h2 class="subject-title">{{ subject.name }}</h2>
+    
+    <div class="subject-buttons">
+      <!-- Botón para TESTS -->
+      <button mat-flat-button class="content-button" (click)="openContent(subject.name, 'test')">
+        <img src="https://img.icons8.com/ios-filled/30/000000/test-passed.png" alt="Test Icon" class="button-icon-img">
+        TESTS
       </button>
-    </div>
-
-    <!-- Contenedor central para la imagen PANDA -->
-    <div class="image-center">
-      <img src="assets/PANDA.png" alt="Panda Image" class="panda-image">
-    </div>
-
-    <!-- Columna de Botones TEST (Derecha) -->
-    <div class="button-column right-column">
-      <button mat-fab extended color="accent" (click)="goToSubjects('test')" class="home-button test-button">
-        <!-- Icono de Test REINTRODUCIDO -->
-        <img src="https://img.icons8.com/ios-filled/48/000000/test-passed.png" alt="Test Icon" class="button-icon-img">
-        <!-- Texto del botón -->
-        <span class="button-text-content">TEST</span>
+      <!-- Botón para PODCASTS -->
+      <button mat-flat-button class="content-button" (click)="openContent(subject.name, 'podcast')">
+        <img src="https://img.icons8.com/ios-filled/30/000000/podcast.png" alt="Podcast Icon" class="button-icon-img">
+        PODCASTS
+      </button>
+      <!-- Botón para PDFS -->
+      <button mat-flat-button class="content-button" (click)="openContent(subject.name, 'pdf')">
+        <img src="https://img.icons8.com/ios-filled/30/000000/pdf.png" alt="PDF Icon" class="button-icon-img">
+        PDFS
+      </button>
+      <!-- Botón para VIDEOS -->
+      <button mat-flat-button class="content-button" (click)="openContent(subject.name, 'video')">
+        <img src="https://img.icons8.com/ios-filled/30/000000/play--v1.png" alt="Video Icon" class="button-icon-img">
+        VIDEOS
       </button>
     </div>
   </div>

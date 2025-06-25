@@ -27,12 +27,12 @@ body {
   font-family: 'Georgia', serif; /* Una fuente que permita una cursiva pronunciada */
   font-style: italic; /* Cursiva */
   font-weight: bold; /* Para que sea una cursiva pronunciada */
-  white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+  white-space: nowrap; /* ¡Mantiene el texto en una sola línea! */
   font-size: 1.2em; /* Tamaño base para el contenedor, influirá en los 'em' internos */
-  letter-spacing: 0.15em; /* Ajustado para dar espacio entre TODAS las letras */
+  letter-spacing: 0.15em; /* Espacio entre TODAS las letras */
   width: 100%; /* Permite que el flexbox distribuya los elementos */
-  display: flex; /* Habilitamos flexbox */
-  justify-content: space-between; /* Distribuye espacio entre los elementos */
+  display: flex; /* Habilitamos flexbox para distribuir las palabras */
+  justify-content: space-between; /* Distribuye espacio entre las palabras */
   align-items: baseline; /* Alinea los elementos por su línea base de texto */
   max-width: 900px; /* Limita el ancho máximo para que no se estire demasiado */
   margin: 0 auto; /* Centra el contenedor flex */
@@ -40,7 +40,6 @@ body {
 }
 
 .header-word {
-  /* margin: 0 15px; // Este margen ya no es tan necesario con justify-content: space-between */
   flex: 1; /* Permite que las palabras ocupen el espacio disponible */
 }
 
@@ -59,12 +58,12 @@ body {
 
 .highlight-char {
   font-size: 5em; /* Tamaño de fuente para D, A, M */
-  color: #8d3535; /* Color rojo/marrón para D, A, M */
+  color: #ec0f0f; /* Color rojo/marrón para D, A, M */
 }
 
 .normal-char {
   font-size: 1em; /* Se mantiene en 1em relativo al contenedor (.header-text-container) */
-  color: #1d5c1d; /* Color verde oscuro para el resto de letras */
+  color: #fcfcfc; /* Color verde oscuro para el resto de letras */
 }
 
 /* -------------------- MAIN CONTENT STYLES -------------------- */
@@ -123,16 +122,21 @@ body {
   }
 
   .header-text-container {
+    /* Eliminamos flex-direction: column; para que se mantenga en fila */
+    flex-direction: row; /* Asegura que se mantenga en una sola línea */
     font-size: 0.8em; /* Ajusta el tamaño base del texto en pantallas más pequeñas */
-    flex-direction: column; /* Apila las palabras en móviles */
-    gap: 5px; /* Espacio entre palabras apiladas */
+    gap: 5px; /* Espacio entre palabras */
     letter-spacing: 0.1em; /* Reduce el espaciado de letras en móviles */
     padding: 0 10px;
+    justify-content: space-around; /* Distribuye las palabras en la línea */
+    align-items: baseline; /* Mantiene la alineación vertical */
   }
 
+  /* Ya no necesitamos alinear individualmente si están en fila y espaciados */
   .header-word1, .header-word2, .header-word3 {
-    text-align: center; /* Centra todas las palabras cuando están apiladas */
-    flex: none; /* Elimina el flex grow cuando están apiladas */
+    text-align: center; /* Centra las palabras dentro de su espacio flex */
+    flex: 1; /* Permite que cada palabra ocupe su parte del espacio */
+    margin: 0; /* Elimina márgenes de palabra para que justify-content: space-around funcione mejor */
   }
 
   .highlight-char {

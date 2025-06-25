@@ -1,0 +1,244 @@
+/* src/app/pdf-viewer/pdf-viewer.css */
+
+/*
+ * Este archivo CSS proporciona estilos personalizados para el componente PdfViewerComponent,
+ * buscando un aspecto moderno y una mejor experiencia de usuario,
+ * consistente con el VideoPlayerComponent.
+ */
+
+/* Contenedor principal de todo el componente. */
+.pdf-viewer-container {
+  font-family: 'Inter', sans-serif;
+  /* Aseguramos que ocupe al menos la altura completa del viewport y centre el contenido */
+  min-height: 100vh;
+  display: flex; /* Añadido explícitamente para asegurar que las propiedades de centrado funcionen */
+  flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+  justify-content: flex-start; /* Alinea los elementos al inicio (arriba) */
+  align-items: center; /* Centra los elementos horizontalmente */
+  background-color: #f0f4f8; /* Color de fondo suave (Tailwind: bg-gray-50) */
+  padding: 1rem; /* Tailwind: p-4, para espaciado general */
+}
+
+/* Contenedor del contenido principal del PDF (visor + controles) */
+.pdf-content {
+  padding: 40px;
+  border-bottom: 8px solid #a78bfa; /* Borde inferior de color púrpura (accent) */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada para profundidad */
+  margin-bottom: 0px; /* Elimina margen inferior extra */
+  /* Propiedades de Tailwind para ancho, max-width, background, redondeo se asumen desde el HTML */
+  max-width: 96rem; /* Equivalente a Tailwind max-w-4xl */
+  background-color: #ffffff;
+  border-radius: 1rem; /* Tailwind: rounded-xl */
+  border-top: 4px solid #60a5fa; /* Borde superior para consistencia visual */
+  display: flex; /* Añadido para controlar el layout interno */
+  flex-direction: column; /* Apila los hijos verticalmente */
+  align-items: center; /* Centra los hijos horizontalmente */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
+
+/* Estilo para el título principal de la asignatura */
+.subject-main-title {
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 20px; /* Espacio debajo del título principal */
+  color: #1d4ed8; /* Tailwind: text-blue-700 */
+  background-color: #ffffff; /* Asegurar fondo blanco para el título */
+  border-radius: 0.75rem; /* Tailwind: rounded-xl */
+  padding: 1rem 1.5rem; /* Tailwind: py-4 px-6 */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Tailwind: shadow-lg */
+  border-bottom: 4px solid #3b82f6; /* Tailwind: border-blue-500 */
+  width: 100%; /* Ocupa el ancho completo de su padre */
+}
+
+/* Mensaje de error */
+.error-message {
+  font-size: 1.1em;
+  font-weight: 600;
+  /* Colores, bordes y redondeos desde Tailwind en HTML */
+  padding: 1.25rem; /* Tailwind: p-5 */
+  margin-bottom: 1.5rem; /* Tailwind: mb-6 */
+  color: #c53030; /* Tailwind: text-red-800 */
+  background-color: #fee2e2; /* Tailwind: bg-red-100 */
+  border: 1px solid #ef4444; /* Tailwind: border-red-500 */
+  border-radius: 0.5rem; /* Tailwind: rounded-lg */
+  text-align: center;
+  font-weight: 500; /* Tailwind: font-medium */
+}
+
+/* Título del PDF */
+.pdf-title {
+  font-size: 2.5em; /* Título del PDF más grande */
+  font-weight: 700; /* Más negrita */
+  color: #212121; /* Color de texto más oscuro para contraste */
+  margin-bottom: 20px; /* Espacio debajo del título del PDF */
+  line-height: 1.2;
+  text-align: center; /* Asegurarse de que esté centrado */
+}
+
+/* Envoltorio del visor de PDF (donde estará ngx-extended-pdf-viewer) */
+.pdf-frame-wrapper {
+  border: 4px solid #4a90e2; /* Borde más distintivo alrededor del visor */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* Sombra más fuerte para el visor */
+  display: flex; /* Para centrar a sus hijos (el visor o el placeholder) */
+  align-items: center; /* Centra verticalmente los hijos */
+  justify-content: center; /* Centra horizontalmente los hijos */
+  position: relative; /* Contexto para hijos posicionados */
+  /* --- ALTURA CRÍTICA: Ajusta esta propiedad --- */
+  min-height: 700px; /* Altura mínima para el visor en escritorio */
+  /* Si prefieres usar viewport height: height: 80vh; */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  background-color: #e2e8f0; /* Tailwind: bg-gray-200 */
+  border-radius: 0.75rem; /* Tailwind: rounded-xl */
+  overflow: hidden; /* Oculta cualquier contenido que se desborde */
+}
+
+/* Estilo para el componente ngx-extended-pdf-viewer en sí */
+/* Asegura que el visor ocupe todo el espacio de su contenedor `pdf-frame-wrapper` */
+ngx-extended-pdf-viewer {
+  width: 100%;
+  height: 100%;
+  display: block; /* Asegura que se comporte como un bloque para ocupar el espacio */
+}
+
+/* Estilos para el placeholder de "No hay PDF cargado" */
+.pdf-frame-wrapper .text-center {
+  width: 100% !important; /* El placeholder debe ocupar el 100% del contenedor */
+  height: 100% !important; /* El placeholder debe ocupar el 100% del contenedor */
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important; /* Asegurar que sea flex para centrar su contenido interno */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box !important;
+}
+
+/* Estilos para los botones de navegación (Anterior, Siguiente) */
+.nav-button {
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 9999px; /* Botones completamente redondos */
+  transition: all 0.3s ease-in-out;
+  background-color: #2563eb; /* Tailwind: bg-blue-600 */
+  color: white;
+}
+
+.nav-button:hover:not([disabled]) {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transform: translateY(-5px) scale(1.02);
+  background-color: #1e40af; /* Tailwind: hover:bg-blue-700 */
+}
+
+.nav-button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Controles de navegación del PDF y botón Inicio */
+.pdf-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 24px; /* Espacio superior */
+}
+
+/* Estilos para el botón "Inicio" dentro del contenedor de navegación */
+.home-button {
+  font-size: 1.2em;
+  font-weight: 700;
+  padding: 15px 40px;
+  border-radius: 9999px;
+  border: 2px solid #673ab7;
+  color: #673ab7;
+  transition: all 0.3s ease-in-out;
+  border-color: #7c3aed; /* Tailwind: border-purple-600 */
+  color: #6d28d9; /* Tailwind: text-purple-700 */
+}
+
+.home-button:hover {
+  background-color: #f3e8ff; /* Tailwind: hover:bg-purple-50 */
+  color: #673ab7; /* Tailwind: text-purple-700 (asegurar que el color sea correcto en hover) */
+  box-shadow: 0 6px 18px rgba(103, 58, 183, 0.3);
+  transform: translateY(-3px) scale(1.01);
+}
+
+/* Estilos para el botón de "Inicio" dentro del mensaje de error */
+.back-button-error {
+  font-size: 0.9em;
+  padding: 8px 20px;
+  border-radius: 6px;
+  border: 1px solid #d32f2f;
+  color: #d32f2f;
+  margin-top: 15px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.back-button-error:hover {
+  background-color: #d32f2f;
+  color: white;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .subject-main-title {
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+  .pdf-content {
+    padding: 25px;
+  }
+  .pdf-title {
+    font-size: 1.8em;
+  }
+  .nav-button {
+    font-size: 1em;
+    padding: 10px 25px;
+  }
+  .home-button {
+    font-size: 1.1em;
+    padding: 12px 30px;
+  }
+  .pdf-navigation {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  /* La altura mínima del wrapper del PDF para tablets */
+  .pdf-frame-wrapper {
+    min-height: 85vh; /* Ajustamos la altura para tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .subject-main-title {
+    font-size: 1.7rem;
+    padding: 1rem;
+  }
+  .pdf-content {
+    padding: 20px;
+  }
+  .pdf-title {
+    font-size: 1.5em;
+  }
+  .nav-button {
+    font-size: 0.9em;
+    padding: 8px 20px;
+    width: 100%;
+    max-width: 200px;
+  }
+  .home-button {
+    font-size: 1em;
+    padding: 10px 25px;
+    width: 100%;
+    max-width: 250px;
+  }
+  /* La altura mínima del wrapper del PDF para móviles */
+  .pdf-frame-wrapper {
+    min-height: 75vh; /* Ajustamos la altura para móviles */
+  }
+}

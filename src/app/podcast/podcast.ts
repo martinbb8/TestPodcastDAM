@@ -119,6 +119,6 @@ export class PodcastComponent implements OnInit {
 
   // Navega de vuelta a la lista de asignaturas en modo "podcast"
   goToSubjects(): void {
-    this.router.navigate(['/subjects', 'podcast']);
+    this.router.navigate(['/asignaturas']);
   }
 }

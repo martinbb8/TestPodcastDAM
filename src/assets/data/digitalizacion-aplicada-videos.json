@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Las revoluciones industriales",
+    "videoUrl": "https://www.youtube.com/embed/0GVgUrtl3OI"
+  },
+  {
+    "id": 2,
+    "title": "Sistemas digitalizados y datos",
+    "videoUrl": "https://www.youtube.com/embed/X_SOyMPloDA"
+  },
+  {
+    "id": 3,
+    "title": "THD en la empresa",
+    "videoUrl": "https://www.youtube.com/embed/IAO3Ajp28Ec"
+  },
+  {
+    "id": 4,
+    "title": "Tecnologías habilitadoras digitales",
+    "videoUrl": "https://www.youtube.com/embed/EnYr1OPSOwg"
+  },
+  {
+    "id": 5,
+    "title": "Estructura de una empresa digitalizada",
+    "videoUrl": "https://www.youtube.com/embed/BFy8GE_cqDM"
+  },
+  {
+    "id": 6,
+    "title": "Sistemas ciberfísicos. Entornos IT y OT. THD",
+    "videoUrl": "https://www.youtube.com/embed/S-yEub--Up8"
+  }
+]

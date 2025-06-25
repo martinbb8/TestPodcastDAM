@@ -1,0 +1,25 @@
+--- posicionarse en powershel en la carpeta del proyecto
+
+cd  TestPodcastDAM
+
+---- Crear el dist para producción
+
+ng build --configuration production --base-href /
+
+---- posicionarse en la carpeta compartida por el anfitrion
+
+cd /media/sf_CompartidaMint/
+
+---- copiarf (sobreescribir) desde la carpeta en la que estamos (".") a donde tenemos la web /var/www/html/osopanda/
+
+sudo cp -rf . /var/www/html/osopanda/
+
+---- Dar permisos de lectura y escritura
+
+sudo chown -R www-data:www-data /var/www/html/osopanda/
+sudo find /var/www/html/osopanda/ -type d -exec chmod 755 {} \;
+sudo find /var/www/html/osopanda/ -type f -exec chmod 644 {} \;
+
+---- Reiniciar apache2 para los cambios
+
+sudo systemctl restart apache2

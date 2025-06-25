@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Introducción a Aulanova",
+    "description": "Exploración de los conceptos fundamentales y la estructura del temario de Aulanova, incluyendo una visión general de hardware y sistemas operativos.",
+    "audioUrl": "assets/audios/aulanova-01.mp3",
+    "transcript": "Aquí irá la transcripción del podcast 'Introducción a Aulanova' una vez lo tengas generado. Por ejemplo: 'Bienvenidos al podcast sobre Aulanova. En este episodio, abordaremos los pilares de la asignatura, desde los componentes internos de un procesador hasta la gestión de memoria y archivos.'",
+    "summary": "Este podcast introduce los temas clave de la asignatura Aulanova, cubriendo procesadores, tipos de memorias, gestión de sistemas operativos y conceptos de virtualización.",
+    "keyPoints": [
+      "Visión general de la CPU y sus componentes.",
+      "Diferencias entre memorias RAM (SRAM, DRAM) y ROM (xPROM).",
+      "Introducción a la gestión de memoria y archivos por el Sistema Operativo.",
+      "Conceptos básicos de virtualización y sus beneficios."
+    ]
+  }
+  
+]

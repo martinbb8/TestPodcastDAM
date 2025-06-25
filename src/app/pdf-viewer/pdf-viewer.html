@@ -1,0 +1,59 @@
+<!-- src/app/pdf-viewer/pdf-viewer.html -->
+
+<div class="container mx-auto p-4 md:p-8 bg-gray-100 min-h-screen flex flex-col items-center">
+  <!-- Título de la Asignatura -->
+  <h1 class="text-3xl md:text-4xl font-extrabold text-blue-800 mb-6 text-center rounded-xl p-3 shadow-lg bg-white w-full max-w-2xl">
+    {{ displaySubjectName }}
+  </h1>
+
+  <!-- Mensajes de Error/Info -->
+  <div *ngIf="errorMessage" class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-6 w-full max-w-4xl rounded-lg shadow" role="alert">
+    <p class="font-bold">Error:</p>
+    <p>{{ errorMessage }}</p>
+  </div>
+  <div *ngIf="!currentPdf && !errorMessage" class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-6 w-full max-w-4xl rounded-lg shadow" role="alert">
+    <p class="font-bold">Información:</p>
+    <p>No se ha seleccionado ningún PDF o no hay PDFs disponibles para esta asignatura.</p>
+  </div>
+
+  <!-- Controles de Navegación -->
+  <div *ngIf="allPdfs.length > 0" class="flex flex-col md:flex-row justify-center items-center gap-4 mb-6 w-full max-w-2xl">
+    <button (click)="previousPdf()" [disabled]="currentPdfIndex === 0"
+            class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-all duration-300
+                   disabled:opacity-50 disabled:cursor-not-allowed w-full md:w-auto">
+      <svg class="w-5 h-5 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+      PDF Anterior
+    </button>
+
+    <span class="text-gray-700 text-lg font-medium text-center flex-shrink-0">
+      {{ currentPdfIndex + 1 }} / {{ allPdfs.length }}
+      <span *ngIf="currentPdf" class="block md:inline"> - {{ currentPdf.title }}</span>
+    </span>
+
+    <button (click)="nextPdf()" [disabled]="currentPdfIndex === allPdfs.length - 1"
+            class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-all duration-300
+                   disabled:opacity-50 disabled:cursor-not-allowed w-full md:w-auto">
+      Siguiente PDF
+      <svg class="w-5 h-5 inline-block ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+    </button>
+  </div>
+
+  <!-- Visor de PDF (usando iframe) -->
+  <div *ngIf="currentPdf && safePdfUrl" class="w-full max-w-4xl bg-white rounded-lg shadow-xl overflow-hidden mb-6" style="height: 80vh;">
+    <iframe [src]="safePdfUrl"
+            width="100%"
+            height="100%"
+            frameborder="0">
+      <!-- Mensaje de fallback si el navegador no soporta iframes o incrustación de PDF -->
+      <p>Tu navegador no soporta la visualización de PDFs. Puedes <a [href]="currentPdf.pdfUrl" target="_blank">descargar el PDF aquí</a>.</p>
+    </iframe>
+  </div>
+
+  <!-- Botón Volver a Inicio -->
+  <div class="mt-6 w-full max-w-2xl flex justify-center">
+    <button (click)="goToHome()"
+            class="px-8 py-4 bg-gray-700 text-white font-semibold rounded-lg shadow-md hover:bg-gray-800 transition-all duration-300">
+      Volver a Inicio
+    </button>
+  </div>
+</div>
