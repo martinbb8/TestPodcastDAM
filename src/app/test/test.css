@@ -1,288 +1,224 @@
 /* src/app/test/test.css */
-.test-container {
-  padding: 20px;
-  text-align: center;
+
+/* ... (tu código CSS existente) ... */
+
+/* Contenedor principal del modal (el overlay oscuro) */
+.test-modal-container {
+  position: fixed; /* Lo fija en la ventana */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente y más oscuro */
+  display: flex; /* Para centrar el contenido del modal */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  z-index: 1000; /* Asegura que esté por encima de todo */
+  padding: 20px; /* Un poco de padding para evitar que el modal toque los bordes */
+  box-sizing: border-box; /* Incluye padding en el cálculo del width/height */
+}
+
+/* El cuadro blanco del modal que contiene el encabezado y el contenido */
+.modal-wrapper { /* Clase nueva para contener todo el modal visual */
   background-color: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  margin: 30px auto;
-  max-width: 800px;
-  width: 90%;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+  max-width: 800px; /* Ancho máximo para el modal */
+  width: 95%; /* Ocupa el 95% del ancho disponible en pantallas más pequeñas */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Organiza el encabezado y el contenido uno debajo del otro */
+  max-height: 90vh; /* Altura máxima para el modal, permite scroll si el contenido es grande */
+  overflow: hidden; /* Oculta el scrollbar en el wrapper si no es necesario */
+}
+
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 20px; /* Espacio entre elementos */
-  flex-grow: 1; /* Para que ocupe el espacio del main */
+  padding: 15px 25px; /* Más padding para el encabezado */
+  background-color: #f0f2f5; /* Un gris claro para el encabezado */
+  border-bottom: 1px solid #e0e0e0; /* Borde más suave */
+  border-top-left-radius: 12px; /* Redondea las esquinas superiores */
+  border-top-right-radius: 12px;
 }
 
-h2 {
-  color: #3f51b5;
-  margin-bottom: 10px;
-  font-size: 2.5em;
-  width: 100%;
+.modal-header h2 {
+  color: #3f51b5; /* Color del título */
+  margin: 0; /* Elimina márgenes por defecto del h2 */
+  font-size: 1.8em; /* Ajusta el tamaño de la fuente si es necesario */
+  line-height: 1.2;
 }
 
-.question-progress {
-  font-size: 1.1em;
-  color: #666;
-  margin-bottom: 20px;
+/* Estilo para el nuevo botón "Volver a Inicio" */
+.modal-header .close-button {
+  background-color: #8d3535; /* El color rojo oscuro que pediste */
+  color: white;
+  padding: 8px 18px; /* Ajusta el padding del botón */
+  font-size: 0.95em;
+  border-radius: 6px;
+  transition: background-color 0.2s ease-in-out;
 }
 
-.question-card {
-  background-color: #f9f9f9;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  padding: 25px;
-  margin-bottom: 25px;
-  width: 100%;
-  box-sizing: border-box;
-  text-align: left; /* Alinea el texto de la pregunta a la izquierda */
+.modal-header .close-button:hover {
+  background-color: #a34646;
 }
 
-.question-text {
-  font-size: 1.4em;
+/* Contenido de las preguntas y opciones */
+.modal-content {
+  padding: 25px; /* Más padding para el contenido */
+  overflow-y: auto; /* Permite scroll si las preguntas son muchas */
+  flex-grow: 1; /* Permite que el contenido ocupe el espacio restante */
+}
+
+/* Estilos para el texto de la pregunta dentro del modal */
+.modal-content .question-text {
+  font-size: 1.3em; /* Ajusta el tamaño de la fuente para las preguntas */
   font-weight: bold;
   color: #333;
   margin-bottom: 20px;
   line-height: 1.5;
 }
 
-.options-grid {
-  display: grid;
-  grid-template-columns: 1fr; /* Una columna por defecto */
-  gap: 15px; /* Espacio entre opciones */
+/* Contenedor de las opciones en columna */
+.options-container-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Espacio entre opciones */
   margin-top: 15px;
 }
 
-.options-grid button.mat-raised-button {
-  width: 100%; /* Opciones ocupan el ancho completo */
-  padding: 15px 20px;
-  font-size: 1.1em;
-  text-align: left; /* Alinea el texto de la opción a la izquierda */
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  white-space: normal; /* Permite que el texto de la opción se ajuste */
-  height: auto; /* Altura automática según el contenido */
-  min-height: 50px; /* Altura mínima para asegurar clicabilidad */
-}
-
-.options-grid button.mat-raised-button:not([disabled]):hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-/* Estilos para el feedback */
-.feedback-section {
-  margin-top: 25px;
-  padding-top: 20px;
-  border-top: 1px solid #eee;
-  text-align: center;
-}
-
-.correct-feedback {
-  color: #4CAF50; /* Verde */
-  font-weight: bold;
-  font-size: 1.3em;
-}
-
-.incorrect-feedback {
-  color: #F44336; /* Rojo */
-  font-weight: bold;
-  font-size: 1.3em;
-}
-
-/* Estilo para la respuesta correcta que se muestra en caso de fallo */
-.correct-answer-display {
-  color: #2196F3; /* Azul para la respuesta correcta */
-  font-size: 1.1em;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.explanation-box {
-  background-color: #e8f5e9; /* Fondo suave para la explicación */
-  border-left: 5px solid #4CAF50; /* Borde verde para correcta */
-  padding: 15px;
-  margin-top: 15px;
-  border-radius: 8px;
-  text-align: left;
-}
-
-.incorrect-feedback + .explanation-box { /* Borde rojo si es incorrecta */
-  background-color: #ffebee;
-  border-left-color: #F44336;
-}
-
-.explanation-box p {
-  font-size: 1em;
-  color: #555;
-  line-height: 1.6;
-}
-
-.feedback-section button.mat-raised-button {
-  margin-top: 20px;
-  padding: 12px 25px;
-  font-size: 1.1em;
-  border-radius: 8px;
-}
-
-/* Navegación al final del componente (botón Volver) */
-.navigation-actions {
-  margin-top: 30px;
-  padding-top: 20px;
-  border-top: 1px solid #eee;
+.options-container-column button {
   width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.navigation-actions button.mat-stroked-button {
-  padding: 10px 20px;
-  font-size: 1em;
+  padding: 14px 20px; /* Ajusta el padding de los botones de opción */
+  font-size: 1.05em;
+  text-align: left;
   border-radius: 8px;
-  border: 1px solid #757575;
-  color: #757575;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  white-space: normal;
+  height: auto;
+  min-height: 50px;
 }
 
-.navigation-actions button.mat-stroked-button:hover {
-  background-color: #f0f0f0;
-  color: #333;
+/* Estilos para los botones de opciones al pasar el ratón */
+.options-container-column button:not([disabled]):hover {
+  background-color: #eef2f7; /* Un fondo suave al pasar el ratón */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+/* src/app/test/test.css */
+
+/* ... (tu código CSS existente) ... */
+
+/* Estilos para el mensaje de respuesta correcta */
+.correct-feedback {
+  color: #4CAF50; /* Verde vibrante */
+  font-weight: bold; /* Para que el texto sea más destacado */
+  font-size: 1.3em; /* Tamaño de fuente un poco más grande */
+  margin-top: 10px; /* Espacio superior */
+  margin-bottom: 10px; /* Espacio inferior */
 }
 
-.navigation-actions .button-icon {
-  margin-right: 8px;
+/* Estilos para el mensaje de respuesta incorrecta */
+.incorrect-feedback {
+  color: #F44336; /* Rojo vibrante */
+  font-weight: bold; /* Para que el texto sea más destacado */
+  font-size: 1.3em; /* Tamaño de fuente un poco más grande */
+  margin-top: 10px; /* Espacio superior */
+  margin-bottom: 10px; /* Espacio inferior */
 }
 
-/* Estilos para la pantalla de resultados finales */
-.test-results-container {
-  padding: 30px;
+/* Puedes añadir estilos adicionales para el contenedor si lo deseas */
+.answer-feedback {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
   text-align: center;
-  background-color: #e3f2fd; /* Azul claro suave */
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  margin: 30px auto;
-  max-width: 600px;
-  width: 90%;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  flex-grow: 1;
-  justify-content: center; /* Centrar contenido verticalmente */
+  background-color: #96d2e4; /* Un fondo suave para el feedback */
+  border: 1px solid #eee;
 }
 
-.test-results-container h2 {
-  color: #1976D2; /* Azul más oscuro */
-  font-size: 2.8em;
-  margin-bottom: 20px;
+/* Si quieres que la explicación también tenga un estilo particular cuando la respuesta es incorrecta,
+   puedes usar esto (adaptado de tu CSS anterior si aplica): */
+.incorrect-feedback + .explanation {
+  color: #555; /* Un color neutro para la explicación */
 }
 
-.final-score-message {
-  font-size: 2.2em;
+/* Asegúrate de que no haya otros estilos que puedan sobrescribir estos colores */
+
+/* Estilos para opciones seleccionadas, correctas e incorrectas */
+.options-container-column button.selected {
+  border-color: #1976D2; /* Color de borde para opción seleccionada */
+  background-color: #e3f2fd; /* Fondo claro para la opción seleccionada */
+}
+
+.options-container-column button.correct {
+  background-color: #e8f5e9; /* Verde muy claro */
+  border-color: #4CAF50; /* Verde */
+  color: #2e7d32; /* Texto verde oscuro */
   font-weight: bold;
-  color: #4CAF50; /* Verde para el score */
-  margin-bottom: 15px;
 }
 
-.fault-summary {
-  font-size: 1.1em;
-  color: #555;
-  margin-bottom: 5px;
+.options-container-column button.incorrect {
+  background-color: #ffebee; /* Rojo muy claro */
+  border-color: #F44336; /* Rojo */
+  color: #c62828; /* Texto rojo oscuro */
+  font-weight: bold;
 }
 
-.results-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 30px;
-  width: 80%; /* Ancho de los botones en resultados */
-  max-width: 300px;
-}
 
-.results-actions button.mat-raised-button,
-.results-actions button.mat-stroked-button {
-  padding: 15px 25px;
-  font-size: 1.2em;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.results-actions button.mat-raised-button {
-  background-color: #4CAF50; /* Verde */
-  color: white;
-}
-
-.results-actions button.mat-stroked-button {
-  border-color: #1976D2;
-  color: #1976D2;
-}
-
+/* ... (el resto de tu código CSS existente) ... */
 
 /* Media Queries para Responsividad */
-@media (min-width: 600px) {
-  .options-grid {
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
-  }
-}
-
 @media (max-width: 768px) {
-  .test-container, .test-results-container {
-    padding: 15px;
-    margin: 15px auto;
-    width: 95%;
+  .modal-wrapper {
+    width: 98%; /* Un poco más de ancho en móviles */
   }
-  h2 {
-    font-size: 2em;
+  .modal-header h2 {
+    font-size: 1.6em;
   }
-  .question-text {
-    font-size: 1.2em;
+  .modal-header .close-button {
+    font-size: 0.85em;
+    padding: 7px 15px;
   }
-  .options-grid button.mat-raised-button {
+  .modal-content {
+    padding: 20px;
+  }
+  .modal-content .question-text {
+    font-size: 1.15em;
+  }
+  .options-container-column button {
     font-size: 1em;
     padding: 12px 15px;
-  }
-  .correct-feedback, .incorrect-feedback {
-    font-size: 1.1em;
-  }
-  .explanation-box p {
-    font-size: 0.9em;
-  }
-  .feedback-section button.mat-raised-button {
-    font-size: 1em;
-    padding: 10px 20px;
-  }
-  .final-score-message {
-    font-size: 1.8em;
-  }
-  .fault-summary {
-    font-size: 1em;
-  }
-  .results-actions button {
-    font-size: 1.1em;
   }
 }
 
 @media (max-width: 480px) {
-  h2 {
-    font-size: 1.8em;
+  .modal-wrapper {
+    max-width: none; /* Sin max-width en pantallas muy pequeñas */
+    border-radius: 0; /* Esquinas rectas en móvil para ocupar toda la pantalla */
+    height: 100%;
   }
-  .question-text {
-    font-size: 1.1em;
+  .modal-header {
+    padding: 10px 15px;
+    border-radius: 0;
   }
-  .options-grid button.mat-raised-button {
+  .modal-header h2 {
+    font-size: 1.4em;
+  }
+  .modal-header .close-button {
+    font-size: 0.8em;
+    padding: 6px 12px;
+  }
+  .modal-content {
+    padding: 15px;
+  }
+  .modal-content .question-text {
+    font-size: 1em;
+  }
+  .options-container-column button {
     font-size: 0.95em;
     padding: 10px 12px;
-  }
-  .final-score-message {
-    font-size: 1.6em;
-  }
-  .results-actions button {
-    font-size: 1em;
   }
 }
